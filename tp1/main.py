@@ -5,10 +5,10 @@ import signal
 import pickle
 from scapy.all import *
 
-ether_types ={
-	0x0800 : "Internet Protocol version 4 (IPv4)",
-	0x0806 : "Address Resolution Protocol (ARP)",
-	0x0842 : "Wake-on-LAN[3]",
+ether_types = {
+	0x0800 : "IPv4",
+	0x0806 : "ARP",
+	0x0842 : "Wake-on-LAN",
 	0x22F0 : "Audio Video Transport Protocol as defined in IEEE Std 1722-2011",
 	0x22F3 : "IETF TRILL Protocol",
 	0x6003 : "DECnet Phase IV",
@@ -19,7 +19,7 @@ ether_types ={
 	0x8137 : "IPX",
 	0x8138 : "IPX",
 	0x8204 : "QNX Qnet",
-	0x86DD : "Internet Protocol Version 6 (IPv6)",
+	0x86DD : "IPv6",
 	0x8808 : "Ethernet flow control",
 	0x8809 : "Slow Protocols (IEEE 802.3)",
 	0x8819 : "CobraNet",
@@ -114,5 +114,5 @@ def print_dict_count(d):
 			print(text, ":", d[key])
 
 
-
-sniff(prn=pkg_handler, count=0)
+if __name__=="__main__":
+	sniff(prn=pkg_handler, count=0)
