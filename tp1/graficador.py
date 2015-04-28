@@ -10,7 +10,7 @@ def leer_entrada():
 	if len(sys.argv) < 2:
 		print("Usage: " + sys.argv[0] + " nombre_de_archivo")
 		exit(1)
-	for filename in sys.argv[1:-1]:
+	for filename in sys.argv[1:]:
 		print(filename)
 		with open(filename, 'rb') as archivo:
 			data = pickle.load(archivo)
