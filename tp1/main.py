@@ -6,7 +6,7 @@ import pickle
 from scapy.all import *
 
 ether_types ={
-	0x0800 :  "Internet Protocol version 4 (IPv4)",
+	0x0800 : "Internet Protocol version 4 (IPv4)",
 	0x0806 : "Address Resolution Protocol (ARP)",
 	0x0842 : "Wake-on-LAN[3]",
 	0x22F0 : "Audio Video Transport Protocol as defined in IEEE Std 1722-2011",
@@ -79,7 +79,10 @@ def pkg_handler(pkg):
 	if pkg.haslayer(Ether):
 		ether_type = pkg[Ether].type
 		pkgs_by_type[ether_type] += 1
-		traffic_by_type[ether_type] += len(pkg)
+		try:
+			traffic_by_type[ether_type] += len(pkg)
+		except IndexError:
+			pass
 		if pkg.haslayer(ARP):
 			arp = pkg[ARP]
 			if arp.op == 1:  # who-has
