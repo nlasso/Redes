@@ -1,0 +1,45 @@
+Cantidad de paquetes por 'type' (capa 2) :
+Internet Protocol version 4 (IPv4) : 32648
+EAP over LAN (IEEE 802.1X) : 176
+Address Resolution Protocol (ARP) : 506
+Internet Protocol Version 6 (IPv6) : 1058
+
+Tamaño de paquetes por 'type' (capa 2) :
+Internet Protocol version 4 (IPv4) : 13499942
+EAP over LAN (IEEE 802.1X) : 24288
+Address Resolution Protocol (ARP) : 21414
+Internet Protocol Version 6 (IPv6) : 533867
+
+IPs emisoras de ARP who-has :
+192.168.1.165 : 1
+192.168.1.124 : 1
+192.168.1.162 : 4
+192.168.1.133 : 11
+192.168.1.1 : 45
+192.168.1.106 : 311
+192.168.1.196 : 6
+
+IPs buscadas por ARP who-has :
+192.168.1.118 : 1
+192.168.1.120 : 4
+192.168.1.165 : 2
+192.168.1.106 : 83
+192.168.1.1 : 167
+192.168.1.193 : 1
+169.254.255.255 : 113
+192.168.1.196 : 1
+192.168.1.124 : 3
+192.168.1.162 : 1
+192.168.1.133 : 2
+192.168.1.100 : 1
+
+IPs emisoras de ARP is-at :
+192.168.1.1 : 85
+192.168.1.124 : 2
+192.168.1.106 : 40
+
+IPs receptoras de ARP is-at :
+192.168.1.1 : 37
+192.168.1.124 : 1
+192.168.1.106 : 87
+192.168.1.196 : 2
