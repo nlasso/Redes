@@ -16,6 +16,7 @@ def main():
 		pkt = IP(dst=target, ttl=timeToLive)/icmp/"XXXX"
 		icmpPacket = sr1(pkt, verbose=0, timeout=2)
 		if (not (icmpPacket is None)):
+			icmpPacket[0].display()
 			if (icmpPacket[ICMP].type == 11):
 				print("Time Exceeded en la IP: ", icmpPacket[IP].src)
 			else:
