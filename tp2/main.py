@@ -4,11 +4,14 @@ import sys
 import signal
 import pickle
 import time, math
+import logging
+
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 
-def main():
+def main(target):
 	timeToLive = 1
-	target = "www.facebook.com"
+	#target = "www.facebook.com"
 	rtts = []
 	while True:
 		pass
@@ -32,4 +35,9 @@ def main():
 		timeToLive += 1
 
 if __name__ == "__main__":
-	main()
+
+	if len(sys.argv) < 2:
+		print("ERROR: Debe especificar una URL o IP de destino")
+		exit()
+
+	main(sys.argv[1])
