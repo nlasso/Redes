@@ -13,7 +13,7 @@ from scapy.error import log_loading
 import logging
 log = logging.getLogger("scapy.loading")
 
-log.warning("Please, report issues to https://github.com/phaethon/scapy")
+#log.warning("Please, report issues to https://github.com/phaethon/scapy")
 
 def _import_star(m):
     #mod = __import__("." + m, globals(), locals())
