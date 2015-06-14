@@ -8,7 +8,7 @@ from scapy.all import *
 
 def main():
 	timeToLive = 1
-	target = "www.facebook.com"
+	target = "www.google.com"
 	rtts = []
 	while True:
 		pass
@@ -29,6 +29,7 @@ def main():
 			else:
 				print("Llegaste hasta", target, " que tiene la IP: ", icmpPacket[IP].src)
 				break
+		print("TTL: ", timeToLive)
 		timeToLive += 1
 
 if __name__ == "__main__":
