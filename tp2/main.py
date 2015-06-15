@@ -74,8 +74,8 @@ def main(target, reps):
     for i in range(0, len(avg_rtts)):
         avg_rtts[i] /= reps
 
-    delta_rtts = [avg_rtts[1]]
-    for i, rtt in range(1, len(avg_rtts)):
+    delta_rtts = [avg_rtts[0]]
+    for i in range(1, len(avg_rtts)):
         delta_rtts.append(avg_rtts[i] - avg_rtts[i-1])
 
     zrtts = []
@@ -83,7 +83,7 @@ def main(target, reps):
         zrtt = (delta_rtt - mean(delta_rtts)) / stdev(delta_rtts)
         zrtts.append(zrtt)
 
-    return zrtts, avg_rtts, hops
+    return zrtts, delta_rtts, hops
 
 
 if __name__ == "__main__":
@@ -95,9 +95,9 @@ if __name__ == "__main__":
     else:
         reps = int(sys.argv[2])
 
-    zrtts, avg_rtts, hops = main(sys.argv[1], reps)
+    zrtts, delta_rtts, hops = main(sys.argv[1], reps)
 
     for i, hop in enumerate(hops):
         print(hop)
-        print("\tZRTT:", zrtts[i])
-        print("\tAVG RTT:", avg_rtts[i])
+        print("\tZRTT: %.5f" % zrtts[i])
+        print("\tDELTA RTT: %.3f" % delta_rtts[i])
