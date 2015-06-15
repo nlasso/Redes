@@ -74,9 +74,11 @@ def main(target, reps):
     for i in range(0, len(avg_rtts)):
         avg_rtts[i] /= reps
 
+    delta_rtts = [avg_rtts[i] - avg_rtts[i+1] for i in range(len(avg_rtts)-1)]
+
     zrtts = []
-    for avg_rtt in avg_rtts:
-        zrtt = (avg_rtt - mean(avg_rtts)) / stdev(avg_rtts)
+    for delta_rtt in delta_rtts:
+        zrtt = (delta_rtt - mean(delta_rtts)) / stdev(delta_rtts)
         zrtts.append(zrtt)
 
     return zrtts, avg_rtts, hops
@@ -97,4 +99,3 @@ if __name__ == "__main__":
         print(hop)
         print("\tZRTT:", zrtts[i])
         print("\tAVG RTT:", avg_rtts[i])
-          
