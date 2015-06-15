@@ -74,7 +74,9 @@ def main(target, reps):
     for i in range(0, len(avg_rtts)):
         avg_rtts[i] /= reps
 
-    delta_rtts = [avg_rtts[i] - avg_rtts[i+1] for i in range(len(avg_rtts)-1)]
+    delta_rtts = [avg_rtts[1]]
+    for i, rtt in range(1, len(avg_rtts)):
+        delta_rtts.append(avg_rtts[i] - avg_rtts[i-1])
 
     zrtts = []
     for delta_rtt in delta_rtts:
