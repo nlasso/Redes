@@ -61,12 +61,9 @@ def main(target, reps):
 
 	for rep in range(1, reps):
 		print ("Ejecutando repeticion", str(rep), "...")
-
 		for i in range(0, len(jumps)):
-			response, rtt = get_rtt(jumps[i], ttls[i])
+			response, rtt = get_rtt(jumps[i], ttls[i])	#TODO: revisar si no va target en lugar de jumps[i]
 			rtts.append(rtt)
-
-			# Sumo RTT
 			avg_rtts[i] += rtt
 		total_rtts.append(rtts)
 
@@ -75,20 +72,17 @@ def main(target, reps):
 		avg_rtts[i] /= reps
 
 	zrtts = []
-	for i in range(0, len(avg_rtts)):
-		zrtt = (avg_rtts[i]-mean(avg_rtts))/stdev(avg_rtts)
+	for avg_rtt in avg_rtts:
+		zrtt = (avg_rtt-mean(avg_rtts))/stdev(avg_rtts)
 		zrtts.append(zrtt)
 
 	return zrtts, avg_rtts, total_rtts, jumps
 
 
-
 if __name__ == "__main__":
-
 	if len(sys.argv) < 2:
 		print("ERROR: Debe especificar una URL o IP de destino")
 		exit()
-
 	if len(sys.argv) < 3:
 		reps = 1
 	else:
