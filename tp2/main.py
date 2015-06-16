@@ -75,7 +75,7 @@ def main(target_txt, reps):
 
     # Deltas
     delta_rtts = [avg_rtts[1]]
-    for i, rtt in range(1, len(avg_rtts)):
+    for rtt in range(1, len(avg_rtts)):
         delta_rtts.append(avg_rtts[i] - avg_rtts[i-1])
 
     # ZRTT
