@@ -87,7 +87,7 @@ def main(target_txt, reps):
     return zrtts, avg_rtts, hops
 
 
-def test_connection(target_txt, alpha, reps):
+def test_connection(target_txt, alpha=0.1, reps=10):
     target = gethostbyname(target_txt)
     n_reply = 0
     n_request = 0
@@ -104,22 +104,37 @@ def test_connection(target_txt, alpha, reps):
         else:
             estimated_rtt = alpha * estimated_rtt + (1 - alpha) * sample_rtt
     estimated_packet_loss_probability = n_reply / n_request
-    throughput = MSS / estimated_rtt * (1 / math.sqrt(estimated_packet_loss_probability))
-    return estimated_rtt, estimated_packet_loss_probability, throughput
+    MSS = get_mss()
+    estimated_throughput = MSS / estimated_rtt * (1 / math.sqrt(estimated_packet_loss_probability))
+    return estimated_rtt, estimated_throughput
+
+
+def get_mss():
+    r = sr1(IP(dst="dc.uba.ar")/TCP(dport=[80], flags="S"), verbose=0, timeout=2)
+    options = r.payload.options
+    for option, value in options:
+        if option == "MSS":
+            return value
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("ERROR: Debe especificar una URL o IP de destino")
-        exit()
-    if len(sys.argv) < 3:
-        reps = 1
+    assert len(sys.argv) >= 2, "You must provide a target"
+    if "test" in sys.argv:
+        target = sys.argv[2]
+        for alpha in [i*0.1 for i in range(1, 10)]:
+            print("ALPHA: ", alpha)
+            for reps in range(10, 60, 10):
+                print("\tREPS: ", reps)
+                estimated_rtt, estimated_throughput = test_connection(target)
+                print("\t\tESTIMATED RTT: %f.3" % estimated_rtt)
+                print("\t\tESTIMATED THROUGHPUT: %f.3" % estimated_throughput)
     else:
-        reps = int(sys.argv[2])
-
-    zrtts, avg_rtts, hops = main(sys.argv[1], reps)
-
-    for i, hop in enumerate(hops):
-        print(hop)
-        print("\tZRTT:", zrtts[i])
-        print("\tAVG RTT:", avg_rtts[i])
+        if len(sys.argv) < 3:
+            reps = 1
+        else:
+            reps = int(sys.argv[2])
+        zrtts, avg_rtts, hops = main(sys.argv[1], reps)
+        for i, hop in enumerate(hops):
+            print(hop)
+            print("\tZRTT:", zrtts[i])
+            print("\tAVG RTT:", avg_rtts[i])
