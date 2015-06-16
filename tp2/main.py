@@ -21,8 +21,7 @@ def get_rtt(target, ttl):
     startTime = time.time()
     response = sr1(pkt, verbose=0, timeout=2)
     endTime = time.time()
-    rttTotal = (endTime - startTime) * 1000
-    rttDec, rtt = math.modf(rttTotal)
+    rtt = (endTime - startTime) * 1000
     return response, rtt
 
 def explore_hops(target_txt):
