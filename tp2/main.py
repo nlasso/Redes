@@ -62,9 +62,9 @@ def main(target, reps):
         print ("Ejecutando repeticion", str(rep), "...")
         for i in range(0, len(hops)):
             response, rtt = get_rtt(target, ttls[i])
-            if hops[i] != response[IP].src:
+            if response is None or hops[i] != response[IP].src:
                 print("WARNING: La ruta parece haber cambiado")
-                print("Quería llegar a", hops[i], "pero me respondió", response[IP].src)
+                print("Quería llegar a", hops[i], "pero me respondió", response[IP].src if not response is None else response)
             rtts.append(rtt)
             avg_rtts[i] += rtt
         total_rtts.append(rtts)
