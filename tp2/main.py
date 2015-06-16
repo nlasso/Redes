@@ -21,8 +21,7 @@ def get_rtt(target, ttl):
     startTime = time.time()
     response = sr1(pkt, verbose=0, timeout=2)
     endTime = time.time()
-    rttTotal = (endTime - startTime) * 1000
-    rttDec, rtt = math.modf(rttTotal)
+    rtt = (endTime - startTime) * 1000
     return response, rtt
 
 def explore_hops(target_txt):
@@ -63,9 +62,9 @@ def main(target, reps):
         print ("Ejecutando repeticion", str(rep), "...")
         for i in range(0, len(hops)):
             response, rtt = get_rtt(target, ttls[i])
-            if hops[i] != response[IP].src:
+            if response is None or hops[i] != response[IP].src:
                 print("WARNING: La ruta parece haber cambiado")
-                print("Quería llegar a", hops[i], "pero me respondió", response[IP].src)
+                print("Quería llegar a", hops[i], "pero me respondió", response[IP].src if not response is None else response)
             rtts.append(rtt)
             avg_rtts[i] += rtt
         total_rtts.append(rtts)
