@@ -14,18 +14,18 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 ECHO_REQUEST_TYPE = 8
 TTL_EXPIRED_IN_TRANSIT = 11
 
-def get_rtt(target, ttl):
+def get_rtt(target, ttl=35):
     icmp = ICMP()
     icmp.type= ECHO_REQUEST_TYPE
     pkt = IP(dst=target, ttl=ttl)/icmp/"X"
     startTime = time.time()
     response = sr1(pkt, verbose=0, timeout=2)
     endTime = time.time()
-    rtt = (endTime - startTime) * 1000
+    rttTotal = (endTime - startTime) * 1000
+    rttDec, rtt = math.modf(rttTotal)
     return response, rtt
 
-def explore_hops(target_txt):
-    target = gethostbyname(target_txt)
+def explore_hops(target, target_txt):
     timeToLive = 1
     rtts = []
     hops = []
@@ -48,10 +48,10 @@ def explore_hops(target_txt):
     return rtts, hops, ttls
 
 
-def main(target, reps):
-    timeToLive = 1
+def main(target_txt, reps):
+    target = gethostbyname(target_txt)
 
-    rtts, hops, ttls = explore_hops(target)
+    rtts, hops, ttls = explore_hops(target_txt, target)
 
     # Mido ZRTT
     avg_rtts = rtts
@@ -73,16 +73,39 @@ def main(target, reps):
     for i in range(0, len(avg_rtts)):
         avg_rtts[i] /= reps
 
-    delta_rtts = [avg_rtts[0]]
-    for i in range(1, len(avg_rtts)):
+    # Deltas
+    delta_rtts = [avg_rtts[1]]
+    for i, rtt in range(1, len(avg_rtts)):
         delta_rtts.append(avg_rtts[i] - avg_rtts[i-1])
 
+    # ZRTT
     zrtts = []
     for delta_rtt in delta_rtts:
         zrtt = (delta_rtt - mean(delta_rtts)) / stdev(delta_rtts)
         zrtts.append(zrtt)
 
-    return zrtts, delta_rtts, hops
+    return zrtts, avg_rtts, hops
+
+
+def test_connection(target_txt, alpha, reps):
+    target = gethostbyname(target_txt)
+    n_reply = 0
+    n_request = 0
+    estimated_rtt = None
+    for i in range(reps):
+        response, sample_rtt = get_rtt(target)
+        n_request += 1
+        if response is None:
+            continue
+        else:
+            n_reply += 1
+        if estimated_rtt is None:
+            estimated_rtt = sample_rtt
+        else:
+            estimated_rtt = alpha * estimated_rtt + (1 - alpha) * sample_rtt
+    estimated_packet_loss_probability = n_reply / n_request
+    throughput = MSS / estimated_rtt * (1 / math.sqrt(estimated_packet_loss_probability))
+    return estimated_rtt, estimated_packet_loss_probability, throughput
 
 
 if __name__ == "__main__":
@@ -94,9 +117,9 @@ if __name__ == "__main__":
     else:
         reps = int(sys.argv[2])
 
-    zrtts, delta_rtts, hops = main(sys.argv[1], reps)
+    zrtts, avg_rtts, hops = main(sys.argv[1], reps)
 
     for i, hop in enumerate(hops):
         print(hop)
-        print("\tZRTT: %.5f" % zrtts[i])
-        print("\tDELTA RTT: %.3f" % delta_rtts[i])
+        print("\tZRTT:", zrtts[i])
+        print("\tAVG RTT:", avg_rtts[i])
