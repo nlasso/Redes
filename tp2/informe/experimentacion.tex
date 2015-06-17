@@ -2,6 +2,20 @@ Para normalizar los datos para el análisis calculamos el valor Z del RTT de cad
 
 Esto nos permite analizar los saltos con una información estadísticamente más sólida que la diferencia absoluta medida en $ms$.
 
+Durante la experimentación hubieron ciertas anomalías detectadas al correr los experimentos. Las mismas fueron:
+
+\begin{itemize}
+    \item Hops que no respondían. En base a este problema se generó la hipótesis de que había hops en los cuales los paquetes ICMP enviados llegaban con un \textit{Time-Exceeded} a un router que estaba configurado para no responder a estos paquetes o para filtrarlos directamente. En base a esto se configuró el método \textit{SR1()} de Scapy pa ra que dado cierto \textit{Timeout} el mismo dejara de esperar a que el router le respondiera permitiéndonos aumentar el TTL y llegar al siguiente Hop.
+    \item Corridas en las cuales no se llegaba a ningún destino haciendo que el script nunca terminara incluso aumentando el TTL y el tiempo de Timeout. Con la misma Hipotesis que la anterior, realizando experimentaciones a diferentes universidades, hubieron algunas como las que se muestran a continuación, entre otras, cuyo servidor estaba configurado para no responder:
+    \begin{itemize}
+        \item Universidad de Tokio
+        \item Melbourne University
+        \item University of Mumbay
+    \end{itemize}
+    En este caso, lo que se realizó para constatar este comportamiento previamente fue hacer un \textit{PING()} a los destinos para corroborar si los mismos responden. De esta manera se supo si había muchos hops que no respondían, como sucedía anteriormente, entre la IP de origen y la de destino o si era efectivamente el destino.
+    \item Las rutas al mismo destino cambiaban. Al correr muchas veces a la misma IP de destino, nos dimos cuenta que las rutas podían varias con lo cual no era lo suficientemente fiable el cálculo del RTT. Dado esto, cuando se detectaba que una ruta no era igual a la primer ruta obtenida, esta era descartaba y se repetía el llamado al mismo hop con el mismo TTL hasta que se obtenía una respuesta de la primer IP con dicho TTL. De esta forma se aseguró la misma ruta en todos los casos.
+\end{itemize}
+
 Presentamos aquí los resultados obtenidos para cada ruta.
 
 Berkeley:
@@ -19,9 +33,9 @@ Berkeley:
 \rule{0pt}{1.2em} 67.17.68.234  &  2.86 & 191.77 & UNITED STATES & Los Angeles, CA \\[0.2em]
 \rule{0pt}{1.2em} 4.68.111.121  &  -1.44 & 141.79 & UNITED STATES & New York, NY \\[0.2em]
 \rule{0pt}{1.2em} 4.35.156.66  &  1.07 & 207.65 & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 137.164.11.1  &  -0.2 0& 214.70 & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 137.164.46.144  &  -0.31 & 216.72 & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 137.164.50.31  &  -0.34 & 217.22 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 137.164.11.1  &  -0.2 0& 214.70 & UNITED STATES & Cypress \\[0.2em]
+\rule{0pt}{1.2em} 137.164.46.144  &  -0.31 & 216.72 & UNITED STATES & Cypress \\[0.2em]
+\rule{0pt}{1.2em} 137.164.50.31  &  -0.34 & 217.22 & UNITED STATES & Cypress \\[0.2em]
 \rule{0pt}{1.2em} 128.32.0.37  &  -0.28 & 220.53 & UNITED STATES & Berkeley, CA \\[0.2em]
 \rule{0pt}{1.2em} 128.32.0.101  &  -0.46 & 215.66 & UNITED STATES & Berkeley, CA \\[0.2em]
 \rule{0pt}{1.2em} 169.229.216.200  &  -0.31 & 217.43 & UNITED STATES & Berkeley, CA \\[0.2em]
@@ -38,13 +52,13 @@ Cusat:
 \rule{0pt}{1.2em} 192.168.2.1  &  -0.01 & 35.71 & (Private Address) & (Private Address) \\[0.2em]
 \rule{0pt}{1.2em} 200.89.164.181  &  -0.33 & 45.44 & ARGENTINA & Buenos Aires \\[0.2em]
 \rule{0pt}{1.2em} 200.89.165.150  &  -0.43 & 43.95 & ARGENTINA & Buenos Aires \\[0.2em]
-\rule{0pt}{1.2em} 195.22.220.152  &  -0.42 & 44.05 & ARGENTINA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 195.22.220.152  &  -0.42 & 44.05 & ITALY & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 195.22.216.142  &  1.12 & 213.52 & ITALY & Milano \\[0.2em]
 \rule{0pt}{1.2em} 195.22.216.142  &  -0.43 & 212.45 & ITALY & Milano \\[0.2em]
-\rule{0pt}{1.2em} 195.22.195.102  &  1.59 & 434.06 & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 218.248.235.161  &  -1.76 & 286.69 & INDIA & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 210.212.233.50  &  1.10 & 454.65 & INDIA & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 210.212.233.50  &  -0.41 & 455.32 & INDIA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 195.22.195.102  &  1.59 & 434.06 & ITALY & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 218.248.235.161  &  -1.76 & 286.69 & INDIA & Bangalore \\[0.2em]
+\rule{0pt}{1.2em} 210.212.233.50  &  1.10 & 454.65 & INDIA & Cochin \\[0.2em]
+\rule{0pt}{1.2em} 210.212.233.50  &  -0.41 & 455.32 & INDIA & Cochin \\[0.2em]
 \hline
  \end{tabular}
 
@@ -65,12 +79,12 @@ Islandia:
 \rule{0pt}{1.2em} 62.115.136.204  &  0.28 & 201.46 & UNITED KINGDOM & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 213.155.133.229  &  -0.46 & 199.20 & RUSSIAN FEDERATION & Moscow \\[0.2em]
 \rule{0pt}{1.2em} 213.248.85.174  &  1.01 & 267.33 & EUROPEAN UNION & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 109.105.97.140  &  -0.35 & 270.48 & (Unknown Country?) & (Unknown City?) \\[0.2em]
-\rule{0pt}{1.2em} 109.105.97.42  &  0.53 & 315.58 & (Unknown Country?) & (Unknown City?) \\[0.2em]
-\rule{0pt}{1.2em} 109.105.102.2  &  -0.59 & 307.25 & (Unknown Country?) & (Unknown City?) \\[0.2em]
-\rule{0pt}{1.2em} 130.208.17.106  &  -0.38 & 308.99 & EUROPEAN UNION & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 130.208.18.174  &  -0.29 & 314.75 & EUROPEAN UNION & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 130.208.165.207  &  -0.53 & 309.26 & EUROPEAN UNION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.97.140  &  -0.35 & 270.48 & SWEDEN & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.97.42  &  0.53 & 315.58 & SWEDEN & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.102.2  &  -0.59 & 307.25 & SWEDEN & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.17.106  &  -0.38 & 308.99 & ICELAND & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.18.174  &  -0.29 & 314.75 & ICELAND & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.165.207  &  -0.53 & 309.26 & ICELAND & (Unknown city) \\[0.2em]
 \hline
  \end{tabular}
 
@@ -93,8 +107,8 @@ Perm:
 \rule{0pt}{1.2em} 213.242.110.198  &  -0.26 & 317.85 & FRANCE & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 194.85.40.229  &  -0.29 & 328.49 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 194.226.194.22  &  0.01 & 355.20 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 212.192.80.57  &  -0.57 & 351.03 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 212.192.64.44  &  -0.37 & 357.50 & RUSSIAN FEDERATION & Omsk \\[0.2em]
+\rule{0pt}{1.2em} 212.192.80.57  &  -0.57 & 351.03 & RUSSIAN FEDERATION & Perm \\[0.2em]
+\rule{0pt}{1.2em} 212.192.64.44  &  -0.37 & 357.50 & RUSSIAN FEDERATION & Perm \\[0.2em]
 \hline
  \end{tabular}
 
@@ -118,15 +132,15 @@ Pretoria:
 \rule{0pt}{1.2em} 154.54.7.26  &  -0.28 & 198.41 & UNITED STATES & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 154.54.31.118  &  -0.39 & 197.44 & UNITED STATES & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 154.54.30.186  &  1.13 & 282.38 & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 130.117.50.201  &  -0.44 & 278.99 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 130.117.50.201  &  -0.44 & 278.99 & EUROPEAN UNION & (Unknown city) \\[0.2em]
 \rule{0pt}{1.2em} 154.54.38.190  &  -0.22 & 287.66 & UNITED STATES & Washington, DC \\[0.2em]
 \rule{0pt}{1.2em} 149.14.80.210  &  -0.01 & 308.23  & UNITED STATES & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 196.32.209.50  &  -0.66 & 292.33 & (Unknown Country?) & (Unknown City?) \\[0.2em]
-\rule{0pt}{1.2em} 196.32.209.117  &  3.08 & 485.75 & (Unknown Country?) & (Unknown City?) \\[0.2em]
-\rule{0pt}{1.2em} 155.232.6.86  &  -0.63 & 471.57 & SOUTH AFRICA & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 155.232.6.29  &  -0.07 & 488.65 & SOUTH AFRICA & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 155.232.6.138  &  -0.66 & 472.79 & SOUTH AFRICA & (Unknown city) \\[0.2em]
-\rule{0pt}{1.2em} 137.215.99.2  &  -0.17 & 484.43 & SOUTH AFRICA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 196.32.209.50  &  -0.66 & 292.33 & SOUTH AFRICA & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 196.32.209.117  &  3.08 & 485.75 & SOUTH AFRICA & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 155.232.6.86  &  -0.63 & 471.57 & SOUTH AFRICA & Wynberg \\[0.2em]
+\rule{0pt}{1.2em} 155.232.6.29  &  -0.07 & 488.65 & SOUTH AFRICA & Wynberg \\[0.2em]
+\rule{0pt}{1.2em} 155.232.6.138  &  -0.66 & 472.79 & SOUTH AFRICA & Wynberg \\[0.2em]
+\rule{0pt}{1.2em} 137.215.99.2  &  -0.17 & 484.43 & SOUTH AFRICA & Pretoria \\[0.2em]
 \rule{0pt}{1.2em} 137.215.10.70  &  -0.45 & 480.05 & SOUTH AFRICA & Pretoria \\[0.2em]
 \hline
  \end{tabular}
