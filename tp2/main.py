@@ -121,8 +121,9 @@ def get_mss():
         if option == "MSS":
             return value
 
-def tableOutput(hops, zrtts, avg_rtts):
-	myFile = open('output.txt', 'w')
+def tableOutput(hops, zrtts, avg_rtts, nombre, nombreIPs):
+	ipFile = open(nombreIPs, 'w')
+	myFile = open(nombre, 'w')
 	latexHeader = '\\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}\n'
 	hline = '\\hline\n'
 	tableHeader = '\\rule{0pt}{1.2em}IP & ZRTT & AVG\\_RTT & PAIS & CIUDAD\\\\[0.2em]\n'
@@ -136,9 +137,11 @@ def tableOutput(hops, zrtts, avg_rtts):
 		city = temp['city']
 		country = temp['country_name']
 		print('\\rule{0pt}{1.2em}', hop, ' & ', zrtts[i], '&', avg_rtts[i], '&' ,country , '&' , city, '\\\\[0.2em]', file=myFile)
+		print(hop,',',zrtts[i],',',avg_rtts[i],',',country,',',city,',', file=ipFile)
 
 	print(hline, latexFooter, file=myFile)
 	myFile.close()
+	ipFIle.close()
 
 if __name__ == "__main__":
 	assert len(sys.argv) >= 2, "You must provide a target"
@@ -160,7 +163,7 @@ if __name__ == "__main__":
 			reps = int(sys.argv[2])
 		zrtts, avg_rtts, hops = main(sys.argv[1], reps)
 		#Print to file
-		tableOutput(hops, zrtts, avg_rtts)
+		tableOutput(hops, zrtts, avg_rtts, sys.args[3], sys.args[4])
 		#Print output to console
 		for i, hop in enumerate(hops):
 			print(hop)
