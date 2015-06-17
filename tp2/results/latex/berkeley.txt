@@ -1,0 +1,22 @@
+\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
+ \hline
+ \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+ \hline
+
+\rule{0pt}{1.2em} 192.168.2.1  &  0.6545230802549306 & 35.35048484802246 & (Private Address) & (Private Address) \\[0.2em]
+\rule{0pt}{1.2em} 200.89.164.137  &  -0.11451812721959125 & 46.40693664550781 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.130  &  -0.411751216663638 & 43.80048751831055 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.222  &  -0.27898098717688474 & 47.29708194732666 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 208.178.195.205  &  -0.43600336737819173 & 43.57583522796631 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 67.17.68.234  &  2.8688832376092868 & 191.77017211914062 & UNITED STATES & Los Angeles, CA \\[0.2em]
+\rule{0pt}{1.2em} 4.68.111.121  &  -1.4423005053257212 & 141.79250717163086 & UNITED STATES & New York, NY \\[0.2em]
+\rule{0pt}{1.2em} 4.35.156.66  &  1.0777397596536793 & 207.65342712402344 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 137.164.11.1  &  -0.2016105164197985 & 214.70650672912598 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 137.164.46.144  &  -0.3112009014580331 & 216.72204971313477 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 137.164.50.31  &  -0.34408295474431855 & 217.22610473632812 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 128.32.0.37  &  -0.28306263897621553 & 220.53507804870605 & UNITED STATES & Berkeley, CA \\[0.2em]
+\rule{0pt}{1.2em} 128.32.0.101  &  -0.4609411011547776 & 215.66751956939697 & UNITED STATES & Berkeley, CA \\[0.2em]
+\rule{0pt}{1.2em} 169.229.216.200  &  -0.3166937610007267 & 217.43057250976562 & UNITED STATES & Berkeley, CA \\[0.2em]
+\hline
+ \end{tabular}
+

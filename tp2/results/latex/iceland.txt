@@ -1,0 +1,24 @@
+\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
+ \hline
+ \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+ \hline
+
+\rule{0pt}{1.2em} 192.168.2.1  &  0.5375235617249319 & 37.37975597381592 & (Private Address) & (Private Address) \\[0.2em]
+\rule{0pt}{1.2em} 200.89.164.153  &  -0.24921139432742778 & 45.367445945739746 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.130  &  -0.4271506590648165 & 44.90079402923584 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.222  &  -0.3692904203948964 & 47.1832275390625 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 208.178.195.205  &  -0.4890782007876412 & 43.77424240112305 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 67.16.139.18  &  3.117328371146019 & 211.71470165252686 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 213.248.76.189  &  -1.33085056053647 & 168.3109951019287 & EUROPEAN UNION & Aarhus South \\[0.2em]
+\rule{0pt}{1.2em} 62.115.136.204  &  0.28043020587488143 & 201.46328926086426 & UNITED KINGDOM & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 213.155.133.229  &  -0.46482903773718415 & 199.20644283294678 & RUSSIAN FEDERATION & Moscow \\[0.2em]
+\rule{0pt}{1.2em} 213.248.85.174  &  1.0165089883927516 & 267.33169078826904 & EUROPEAN UNION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.97.140  &  -0.3509742589132345 & 270.48437118530273 & (Unknown Country?) & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.97.42  &  0.5319707250823439 & 315.5879878997803 & (Unknown Country?) & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 109.105.102.2  &  -0.5926822759690654 & 307.25651264190674 & (Unknown Country?) & (Unknown City?) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.17.106  &  -0.38084319894571467 & 308.99004459381104 & EUROPEAN UNION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.18.174  &  -0.29600469879916147 & 314.75446701049805 & EUROPEAN UNION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 130.208.165.207  &  -0.5328471467453156 & 309.2659091949463 & EUROPEAN UNION & (Unknown city) \\[0.2em]
+\hline
+ \end{tabular}
+

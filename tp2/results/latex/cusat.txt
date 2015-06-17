@@ -1,0 +1,18 @@
+\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
+ \hline
+ \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+ \hline
+
+\rule{0pt}{1.2em} 192.168.2.1  &  -0.009667267043929012 & 35.71164608001709 & (Private Address) & (Private Address) \\[0.2em]
+\rule{0pt}{1.2em} 200.89.164.181  &  -0.33522399596626506 & 45.44596195220947 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.150  &  -0.4375875924672001 & 43.95159721374512 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 195.22.220.152  &  -0.4229774177051841 & 44.059882164001465 & ARGENTINA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 195.22.216.142  &  1.1209147425261223 & 213.52399826049805 & ITALY & Milano \\[0.2em]
+\rule{0pt}{1.2em} 195.22.216.142  &  -0.433714483389185 & 212.4544906616211 & ITALY & Milano \\[0.2em]
+\rule{0pt}{1.2em} 195.22.195.102  &  1.596332220117028 & 434.06908988952637 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 218.248.235.161  &  -1.7674446481799988 & 286.6972780227661 & INDIA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 210.212.233.50  &  1.1071896113765867 & 454.65582847595215 & INDIA & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 210.212.233.50  &  -0.4178211692679748 & 455.3297233581543 & INDIA & (Unknown city) \\[0.2em]
+\hline
+ \end{tabular}
+

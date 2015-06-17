@@ -1,0 +1,22 @@
+\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
+ \hline
+ \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+ \hline
+
+\rule{0pt}{1.2em} 192.168.2.1  &  0.3643976980502533 & 35.15125274658203 & (Private Address) & (Private Address) \\[0.2em]
+\rule{0pt}{1.2em} 200.89.166.161  &  -0.30214696617711395 & 45.49147605895996 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.130  &  -0.5110381689951923 & 44.81550216674805 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 200.89.165.222  &  -0.4671093001755554 & 46.45618438720703 & ARGENTINA & Buenos Aires \\[0.2em]
+\rule{0pt}{1.2em} 208.178.244.213  &  -0.524804515404198 & 45.05422115325928 & UNITED STATES & Los Angeles, CA \\[0.2em]
+\rule{0pt}{1.2em} 67.17.75.66  &  2.5426935516772287 & 205.421462059021 & UNITED STATES & Los Angeles, CA \\[0.2em]
+\rule{0pt}{1.2em} 4.68.111.121  &  -1.066035019166414 & 175.47688007354736 & UNITED STATES & New York, NY \\[0.2em]
+\rule{0pt}{1.2em} 4.69.158.245  &  1.898170014421295 & 301.85418605804443 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 4.69.158.245  &  -0.4298608404943582 & 305.4592227935791 & UNITED STATES & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 213.242.110.198  &  -0.2631193365837979 & 317.85762786865234 & FRANCE & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 194.85.40.229  &  -0.29648774649781295 & 328.496298789978 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 194.226.194.22  &  0.00828188035606366 & 355.207462310791 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 212.192.80.57  &  -0.5773315752312607 & 351.03540420532227 & RUSSIAN FEDERATION & (Unknown city) \\[0.2em]
+\rule{0pt}{1.2em} 212.192.64.44  &  -0.3756096757791377 & 357.5014591217041 & RUSSIAN FEDERATION & Omsk \\[0.2em]
+\hline
+ \end{tabular}
+
