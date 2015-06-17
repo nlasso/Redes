@@ -16,9 +16,9 @@ echo "Completado antananarivo (que nombre!)"
 ./main.py test english.hi.is > results/hi_throughput.dat
 echo "Completado Islandia"
 
-./main.py www.mu.ac.in 50 > results/muac.dat # Universidad de Bombay (India)
-./main.py test www.mu.ac.in > results/muac_throughput.dat
-echo "Completado mu.ac (Bombay - India)"
+#./main.py www.mu.ac.in 50 > results/muac.dat # Universidad de Bombay (India)
+#./main.py test www.mu.ac.in > results/muac_throughput.dat
+#echo "Completado mu.ac (Bombay - India)"
 
 ./main.py www.u-tokyo.ac.jp 50 > results/tokyo.dat # Universidad de Tokyo, Japón
 ./main.py test www.u-tokyo.ac.jp > results/tokyo_throughput.dat
