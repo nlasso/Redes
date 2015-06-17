@@ -123,7 +123,7 @@ def get_mss():
 
 def tableOutput(hops, zrtts, avg_rtts):
 	myFile = open('output.txt', 'w')
-	latexHeader = '\\begin{tabular}{|l@{\hspace{5ex}}c@{\hspace{5ex}}l|}\n'
+	latexHeader = '\\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}\n'
 	hline = '\\hline\n'
 	tableHeader = '\\rule{0pt}{1.2em}IP & ZRTT & AVG\\_RTT & PAIS & CIUDAD\\\\[0.2em]\n'
 	latexFooter = '\\end{tabular}\n'
