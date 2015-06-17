@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{multicol}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{algpseudocode}
+\usepackage{courier}
+\usepackage{enumitem}
+\usepackage{placeins}
+
+
+
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+\lstset{language=C++, showstringspaces=false, tabsize=2, breaklines=true, title=\lstname}
+
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+
+\title{Trabajo Práctico I de Teoría de las Comunicaciones}
+
+\author{, Nicolás Lasso, , }
+
+\date{\today}
+
+\makeindex
+
+\begin{document}
+\newgeometry{margin=2cm}
+\pagenumbering{gobble}
+\raggedleft
+\includegraphics[width=8cm]{caratula/logo1.jpg}\\
+
+\raggedright
+\vspace{3cm}
+{\Huge \bfseries Trabajo Práctico 2}
+\rule{\textwidth}{0.02in}
+\large Miércoles 17 de junio de 2015 \hfill Teoría de las Comunicaciones
+\vspace{1.5cm}
+
+\normalsize
+\begin{tabular}{|l@{\hspace{5ex}}c@{\hspace{5ex}}l|}
+        \hline
+        \rule{0pt}{1.2em}Integrante & LU & Correo electrónico\\[0.2em]
+        \hline
+        \rule{0pt}{1.2em} Nahuel Lascano  & 476/11 &\tt laski.nahuel@gmail.com\\[0.2em]
+        \rule{0pt}{1.2em} Nicolás Lasso & 763/10 &\tt lasso.nico@gmail.com\\[0.2em]
+        \rule{0pt}{1.2em} Roberto Rama  & 490/11 &\tt bertoski@gmail.com\\[0.2em]
+        \rule{0pt}{1.2em} Pablo Somodi  & 818/10 &\tt psomodi@dc.uba.ar\\[0.2em]
+        \hline
+\end{tabular}
+
+\vspace{1.0cm}
+\raggedright
+
+\begin{multicols}{2}
+\includegraphics[width=8cm]{caratula/logo-uba.png}
+
+\columnbreak
+\vspace*{4.5cm}
+\raggedleft
+\textbf{Facultad de Ciencias Exactas y Naturales}\\
+Universidad de Buenos Aires\\
+\small
+Ciudad Universitaria - (Pabellon I/Planta Baja)\\
+Intendente G\"uiraldes 2160 - C1428EGA\\
+Ciudad Autonoma de Buenos Aires - Rep. Argentina\\
+Tel/Fax: (54 11) 4576-3359\\
+http://www.fcen.uba.ar
+\end{multicols}
+
+\restoregeometry
+
+\clearpage
+
+\pagenumbering{arabic}
+
+\tableofcontents
+
+\vspace{3cm}
+
+\clearpage
+
+\setlength{\parindent}{10pt}
+
+\section{Introducción}
+\input{introduccion.tex}
+\clearpage
+
+\section{Implementación}
+\input{implementacion.tex}
+\clearpage
+
+\section{Experimentación}
+\input{experimentacion.tex}
+\clearpage
+
+\section{Resultados}
+\input{resultados.tex}
+\clearpage
+
+\section{Conclusiones}
+\input{conclusiones.tex}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
