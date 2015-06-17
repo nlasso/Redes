@@ -3,7 +3,8 @@ Para implementar la herramienta utilizamos paquetes de tipo ICMP.
 Primeramente decidimos resolver el registro DNS a su IP correspondiente para evitar considerar el tiempo que pudiera tardar este procedimiento. Además, esto nos permite evitar el posible cambio de rutas producto de alguna universidad usando Round-robin DNS\footnote{https://en.wikipedia.org/wiki/Round-robin_DNS}.
 
 En el comienzo de nuestra implementación nuestra herramienta explora la ruta completa para estudiar los hosts que pertenecen a la misma.
-Decidimos limitar el crecimiento del time to live a 35, pero de todos modos esto no afectó ya que llegamos a todos los hosts elegidos en menos saltos.
+Decidimos limitar el crecimiento del time to live a 35 ya que es un poco mayor que la que utilizan las herramientas provistas por Linux.
+De todos modos esto no afectó ya que llegamos a todos los hosts elegidos en menos saltos.
 
 Luego de esto utilizamos la ruta descubierta para realizar 50 repeticiones de mediciones de RTT de forma incremental en el TTL.
 Como las rutas pueden cambiar, cuando detectamos un cambio en algún hop, reintentamos el echo-request con el mismo TTL hasta que coincidiera el host con el descubierto inicialmente.
