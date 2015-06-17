@@ -143,7 +143,7 @@ def tableOutput(hops, zrtts, avg_rtts, nombre, nombreIPs):
 
 	print(hline, latexFooter, file=myFile)
 	myFile.close()
-	ipFIle.close()
+	ipFile.close()
 
 if __name__ == "__main__":
 	assert len(sys.argv) >= 2, "You must provide a target"
@@ -165,7 +165,7 @@ if __name__ == "__main__":
 			reps = int(sys.argv[2])
 		zrtts, avg_rtts, hops = main(sys.argv[1], reps)
 		#Print to file
-		tableOutput(hops, zrtts, avg_rtts, sys.args[3], sys.args[4])
+		tableOutput(hops, zrtts, avg_rtts, sys.argv[3], sys.argv[4])
 		#Print output to console
 		for i, hop in enumerate(hops):
 			print(hop)
