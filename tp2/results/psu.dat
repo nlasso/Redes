@@ -1,38 +1,36 @@
 TTL= 1
-El RTT para esta IP 192.168.2.1 fue de: 78.0
+El RTT para esta IP 192.168.2.1 fue de: 57.31654167175293
 TTL= 2
 TTL= 3
 TTL= 4
 TTL= 5
-El RTT para esta IP 200.89.166.161 fue de: 53.0
+El RTT para esta IP 200.89.166.161 fue de: 30.2431583404541
 TTL= 6
-El RTT para esta IP 200.89.165.130 fue de: 51.0
+El RTT para esta IP 200.89.165.130 fue de: 41.84412956237793
 TTL= 7
-El RTT para esta IP 200.89.165.222 fue de: 45.0
+El RTT para esta IP 200.89.165.222 fue de: 42.70291328430176
 TTL= 8
-El RTT para esta IP 208.178.244.213 fue de: 54.0
+El RTT para esta IP 208.178.244.213 fue de: 34.6982479095459
 TTL= 9
-El RTT para esta IP 67.17.75.66 fue de: 174.0
+El RTT para esta IP 67.17.75.66 fue de: 169.70252990722656
 TTL= 10
-El RTT para esta IP 4.68.111.121 fue de: 177.0
+El RTT para esta IP 4.68.111.121 fue de: 166.71061515808105
 TTL= 11
-El RTT para esta IP 4.69.158.245 fue de: 303.0
+El RTT para esta IP 4.69.158.245 fue de: 290.8363342285156
 TTL= 12
-El RTT para esta IP 4.69.158.245 fue de: 299.0
+El RTT para esta IP 4.69.158.245 fue de: 291.1090850830078
 TTL= 13
-El RTT para esta IP 213.242.110.198 fue de: 317.0
+El RTT para esta IP 213.242.110.198 fue de: 309.74459648132324
 TTL= 14
 TTL= 15
-El RTT para esta IP 194.85.40.229 fue de: 322.0
+El RTT para esta IP 194.85.40.229 fue de: 322.6814270019531
 TTL= 16
-El RTT para esta IP 194.226.194.22 fue de: 358.0
+El RTT para esta IP 194.226.194.22 fue de: 354.4280529022217
 TTL= 17
-El RTT para esta IP 212.192.80.57 fue de: 339.0
+El RTT para esta IP 212.192.80.57 fue de: 357.66077041625977
 TTL= 18
 Llegaste hasta 212.192.64.44 que tiene la IP: 212.192.64.44
 Ejecutando repeticion 1 ...
-WARNING: La ruta parece haber cambiado
-Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 2 ...
 Ejecutando repeticion 3 ...
 Ejecutando repeticion 4 ...
@@ -54,28 +52,26 @@ Ejecutando repeticion 19 ...
 Ejecutando repeticion 20 ...
 Ejecutando repeticion 21 ...
 Ejecutando repeticion 22 ...
-WARNING: La ruta parece haber cambiado
-Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 23 ...
 Ejecutando repeticion 24 ...
 Ejecutando repeticion 25 ...
 Ejecutando repeticion 26 ...
 Ejecutando repeticion 27 ...
-WARNING: La ruta parece haber cambiado
-Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 28 ...
 Ejecutando repeticion 29 ...
 Ejecutando repeticion 30 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 4.69.158.245 pero me respondió 4.69.158.253
 Ejecutando repeticion 31 ...
 Ejecutando repeticion 32 ...
 Ejecutando repeticion 33 ...
-WARNING: La ruta parece haber cambiado
-Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 34 ...
 Ejecutando repeticion 35 ...
 Ejecutando repeticion 36 ...
 Ejecutando repeticion 37 ...
 Ejecutando repeticion 38 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 39 ...
 Ejecutando repeticion 40 ...
 Ejecutando repeticion 41 ...
@@ -86,46 +82,48 @@ Ejecutando repeticion 45 ...
 Ejecutando repeticion 46 ...
 Ejecutando repeticion 47 ...
 Ejecutando repeticion 48 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 4.69.158.245 pero me respondió 4.69.158.249
 Ejecutando repeticion 49 ...
 192.168.2.1
-	ZRTT: 3.474396144861517
-	AVG RTT: 37.16
+	ZRTT: 0.44131328961825284
+	AVG RTT: 34.071106910705566
 200.89.166.161
-	ZRTT: -0.26726124191242434
-	AVG RTT: 43.6
+	ZRTT: -0.3743334015539204
+	AVG RTT: 44.89516735076904
 200.89.165.130
-	ZRTT: -0.26726124191242434
-	AVG RTT: 43.64
+	ZRTT: -0.6436733386942681
+	AVG RTT: 44.46838855743408
 200.89.165.222
-	ZRTT: -0.26726124191242434
-	AVG RTT: 44.18
+	ZRTT: -0.627173260764115
+	AVG RTT: 44.730849266052246
 208.178.244.213
-	ZRTT: -0.26726124191242434
-	AVG RTT: 45.04
+	ZRTT: -0.603411477350173
+	AVG RTT: 45.98588466644287
 67.17.75.66
-	ZRTT: -0.26726124191242434
-	AVG RTT: 175.46
+	ZRTT: 2.4273263847241457
+	AVG RTT: 173.84057998657227
 4.68.111.121
-	ZRTT: -0.26726124191242434
-	AVG RTT: 175.98
+	ZRTT: -0.6534443473180048
+	AVG RTT: 173.00564765930176
 4.69.158.245
-	ZRTT: -0.26726124191242434
-	AVG RTT: 304.56
+	ZRTT: 2.019203331404735
+	AVG RTT: 283.81227016448975
 4.69.158.245
-	ZRTT: -0.26726124191242434
-	AVG RTT: 304.04
+	ZRTT: -0.4885435657214403
+	AVG RTT: 289.86555576324463
 213.242.110.198
-	ZRTT: -0.26726124191242434
-	AVG RTT: 314.92
+	ZRTT: -0.04155747740116606
+	AVG RTT: 314.5902967453003
 194.85.40.229
-	ZRTT: -0.26726124191242434
-	AVG RTT: 331.3
+	ZRTT: -0.26942062674311673
+	AVG RTT: 329.79676246643066
 194.226.194.22
-	ZRTT: -0.26726124191242434
-	AVG RTT: 353.04
+	ZRTT: -0.03171820550394705
+	AVG RTT: 354.93250846862793
 212.192.80.57
-	ZRTT: -0.26726124191242434
-	AVG RTT: 349.84
+	ZRTT: -0.8188999107024024
+	AVG RTT: 347.18618392944336
 212.192.64.44
-	ZRTT: -0.26726124191242434
-	AVG RTT: 354.38
+	ZRTT: -0.3356673939945796
+	AVG RTT: 359.6253967285156

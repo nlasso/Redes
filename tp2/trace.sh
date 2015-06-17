@@ -2,24 +2,24 @@
 
 ./main.py berkeley.edu 50 > results/berkeley.dat # Universidad de Berkeley, California, EEUU
 ./main.py test berkeley.edu > results/berkeley_throughput.dat # Universidad de Berkeley, California, EEUU
-echo "Completado berkley.edu"
+echo "Completado berkley.edu (Estados unidos)"
 
 ./main.py en.psu.ru 50 > results/psu.dat # Perm State University -- Universidad en Perm, Rusia
 ./main.py test en.psu.ru > results/psu_throughput.dat
-echo "Completado en.psu.ru"
-
-./main.py www.univ-antananarivo.mg 50 > results/antananarivo.dat # Universidad de Madagascar (Este de Africa)
-./main.py test www.univ-antananarivo.mg > results/antananarivo_throughput.dat
-echo "Completado antananarivo (que nombre!)"
+echo "Completado en.psu.ru (Rusia)"
 
 ./main.py english.hi.is 50 > results/hi.dat # Iceland University
 ./main.py test english.hi.is > results/hi_throughput.dat
-echo "Completado Islandia"
+echo "Completado Islandia (Islandia)"
 
-#./main.py www.mu.ac.in 50 > results/muac.dat # Universidad de Bombay (India)
-#./main.py test www.mu.ac.in > results/muac_throughput.dat
-#echo "Completado mu.ac (Bombay - India)"
+#./main.py u-tokyo.ac.jp 50 > results/tokyo.dat # Universidad de Tokyo, Japón
+#./main.py test u-tokyo.ac.jp > results/tokyo_throughput.dat
+#echo "Completado Tokyo (Japon)"
 
-./main.py www.u-tokyo.ac.jp 50 > results/tokyo.dat # Universidad de Tokyo, Japón
-./main.py test www.u-tokyo.ac.jp > results/tokyo_throughput.dat
-echo "Compeltado Tokyo"
+./main.py cusat.ac.in 50 > results/cusat.dat # Universidad de Tokyo, Japón
+./main.py test cusat.ac.in > results/cusat_throughput.dat
+echo "Completado Cusat (India)"
+
+./main.py up.ac.za > results/pretoria.dat
+./main.py test up.ac.za > results/pretoria_throughput.dat
+echo "Completado Pretoria (Sud-Africa)"
