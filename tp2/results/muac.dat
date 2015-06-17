@@ -1,0 +1,924 @@
+TTL= 1
+El RTT para esta IP 192.168.2.1 fue de: 59.0
+TTL= 2
+TTL= 3
+TTL= 4
+TTL= 5
+El RTT para esta IP 200.89.164.141 fue de: 43.0
+TTL= 6
+El RTT para esta IP 200.89.165.150 fue de: 38.0
+TTL= 7
+El RTT para esta IP 185.70.203.10 fue de: 39.0
+TTL= 8
+El RTT para esta IP 93.186.129.1 fue de: 309.0
+TTL= 9
+El RTT para esta IP 67.16.134.218 fue de: 171.0
+TTL= 10
+El RTT para esta IP 66.110.9.61 fue de: 166.0
+TTL= 11
+El RTT para esta IP 125.18.4.26 fue de: 415.0
+TTL= 12
+TTL= 13
+El RTT para esta IP 80.231.159.30 fue de: 286.0
+TTL= 14
+El RTT para esta IP 80.231.91.65 fue de: 279.0
+TTL= 15
+El RTT para esta IP 80.231.200.5 fue de: 298.0
+TTL= 16
+El RTT para esta IP 80.231.200.26 fue de: 370.0
+TTL= 17
+El RTT para esta IP 121.244.40.157 fue de: 374.0
+TTL= 18
+TTL= 19
+El RTT para esta IP 121.241.33.68 fue de: 370.0
+TTL= 20
+TTL= 21
+TTL= 22
+TTL= 23
+TTL= 24
+TTL= 25
+TTL= 26
+TTL= 27
+TTL= 28
+TTL= 29
+TTL= 30
+TTL= 31
+TTL= 32
+TTL= 33
+TTL= 34
+ERROR: El hostwww.mu.ac.ines inalcanzable
+Ejecutando repeticion 1 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 2 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 3 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 4 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 5 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 6 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 7 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 8 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 9 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 10 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 11 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 12 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 13 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 14 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 15 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 16 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 17 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 18 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 19 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 20 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 21 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 22 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 23 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 24 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 25 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 26 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 27 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 28 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 29 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 30 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 31 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 32 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 33 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 34 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 35 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 36 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 37 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 38 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 39 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 40 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 41 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 42 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 43 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 44 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 45 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 46 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 47 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 48 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+Ejecutando repeticion 49 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 67.16.134.218 pero me respondió 195.22.199.82
+WARNING: La ruta parece haber cambiado
+Quería llegar a 66.110.9.61 pero me respondió 59.144.37.21
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.159.30 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.91.65 pero me respondió 115.111.114.58
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.5 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 80.231.200.26 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.244.40.157 pero me respondió None
+WARNING: La ruta parece haber cambiado
+Quería llegar a 121.241.33.68 pero me respondió None
+192.168.2.1
+	ZRTT: 3.474396144861517
+	AVG RTT: 34.56
+200.89.164.141
+	ZRTT: -0.2672612419124244
+	AVG RTT: 44.1
+200.89.165.150
+	ZRTT: -0.2672612419124244
+	AVG RTT: 45.26
+185.70.203.10
+	ZRTT: -0.2672612419124244
+	AVG RTT: 42.82
+93.186.129.1
+	ZRTT: -0.2672612419124244
+	AVG RTT: 310.46
+67.16.134.218
+	ZRTT: -0.2672612419124244
+	AVG RTT: 418.28
+66.110.9.61
+	ZRTT: -0.2672612419124244
+	AVG RTT: 419.38
+125.18.4.26
+	ZRTT: -0.2672612419124244
+	AVG RTT: 425.14
+80.231.159.30
+	ZRTT: -0.2672612419124244
+	AVG RTT: 1994.9
+80.231.91.65
+	ZRTT: -0.2672612419124244
+	AVG RTT: 380.64
+80.231.200.5
+	ZRTT: -0.2672612419124244
+	AVG RTT: 1993.94
+80.231.200.26
+	ZRTT: -0.2672612419124244
+	AVG RTT: 1996.74
+121.244.40.157
+	ZRTT: -0.2672612419124244
+	AVG RTT: 1995.16
+121.241.33.68
+	ZRTT: -0.2672612419124244
+	AVG RTT: 1996.06

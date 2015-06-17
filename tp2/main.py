@@ -25,8 +25,7 @@ def get_rtt(target, ttl=35):
     response = sr1(pkt, verbose=0, timeout=2)
     endTime = time.time()
     rttTotal = (endTime - startTime) * 1000
-    rttDec, rtt = math.modf(rttTotal)
-    return response, rtt
+    return response, rttTotal
 
 def explore_hops(target, target_txt):
     timeToLive = 1
@@ -106,6 +105,9 @@ def test_connection(target_txt, alpha=0.1, reps=10):
             estimated_rtt = sample_rtt
         else:
             estimated_rtt = alpha * estimated_rtt + (1 - alpha) * sample_rtt
+    if estimated_rtt is None:
+        print("ERROR: No hubo respuesta alguna")
+        return 0, 0
     estimated_packet_loss_probability = n_reply / n_request
     MSS = get_mss()
     estimated_throughput = MSS / estimated_rtt * (1 / math.sqrt(estimated_packet_loss_probability))
