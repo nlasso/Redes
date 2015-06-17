@@ -1,0 +1,71 @@
+TTL= 1
+El RTT para esta IP 192.168.1.1 fue de: 43.702125549316406
+TTL= 2
+El RTT para esta IP 190.17.187.1 fue de: 31.63599967956543
+TTL= 3
+TTL= 4
+TTL= 5
+TTL= 6
+El RTT para esta IP 200.89.164.53 fue de: 31.456947326660156
+TTL= 7
+El RTT para esta IP 200.89.165.250 fue de: 45.703887939453125
+TTL= 8
+El RTT para esta IP 207.136.166.241 fue de: 31.154870986938477
+TTL= 9
+El RTT para esta IP 67.17.75.66 fue de: 168.08700561523438
+TTL= 10
+El RTT para esta IP 4.68.111.121 fue de: 152.2049903869629
+TTL= 11
+El RTT para esta IP 4.69.200.225 fue de: 431.7128658294678
+TTL= 12
+El RTT para esta IP 4.69.200.225 fue de: 428.3030033111572
+TTL= 13
+El RTT para esta IP 212.73.206.190 fue de: 374.2489814758301
+TTL= 14
+El RTT para esta IP 41.189.225.122 fue de: 454.3428421020508
+TTL= 15
+El RTT para esta IP 41.188.60.131 fue de: 577.3530006408691
+TTL= 16
+TTL= 17
+El RTT para esta IP 41.188.61.238 fue de: 479.63809967041016
+TTL= 18
+El RTT para esta IP 41.188.60.17 fue de: 563.2710456848145
+TTL= 19
+El RTT para esta IP 41.242.111.122 fue de: 512.6590728759766
+TTL= 20
+TTL= 21
+TTL= 22
+TTL= 23
+TTL= 24
+TTL= 25
+TTL= 26
+TTL= 27
+TTL= 28
+TTL= 29
+TTL= 30
+TTL= 31
+TTL= 32
+TTL= 33
+TTL= 34
+ERROR: El hostwww.univ-antananarivo.mges inalcanzable
+Ejecutando repeticion 1 ...
+Ejecutando repeticion 2 ...
+Ejecutando repeticion 3 ...
+Ejecutando repeticion 4 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 4.68.111.121 pero me respondió None
+Ejecutando repeticion 5 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 4.68.111.121 pero me respondió None
+Ejecutando repeticion 6 ...
+Ejecutando repeticion 7 ...
+Ejecutando repeticion 8 ...
+Ejecutando repeticion 9 ...
+Ejecutando repeticion 10 ...
+Ejecutando repeticion 11 ...
+Ejecutando repeticion 12 ...
+Ejecutando repeticion 13 ...
+Ejecutando repeticion 14 ...
+WARNING: La ruta parece haber cambiado
+Quería llegar a 41.188.60.17 pero me respondió None
+Ejecutando repeticion 15 ...

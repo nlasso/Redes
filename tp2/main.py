@@ -67,6 +67,8 @@ def main(target_txt, reps):
             if response is None or hops[i] != response[IP].src:
                 print("WARNING: La ruta parece haber cambiado")
                 print("Quería llegar a", hops[i], "pero me respondió", response[IP].src if not response is None else response)
+                i -= 1
+                continue
             rtts.append(rtt)
             avg_rtts[i] += rtt
         total_rtts.append(rtts)
