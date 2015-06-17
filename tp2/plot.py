@@ -24,6 +24,6 @@ x = np.linspace(-3,3,100)
 plt.plot(x, mlab.normpdf(x,mean,sigma))
 
 plt.plot(xpoints, ypoints, 'ro')
-
+plt.xlabel("ZRTT (en desvíos standards)")
 
 plt.savefig(sys.argv[1])

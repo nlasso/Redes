@@ -156,6 +156,7 @@ if __name__ == "__main__":
 				estimated_rtt, estimated_throughput = test_connection(target)
 				print("\t\tESTIMATED RTT: %f.3" % estimated_rtt)
 				print("\t\tESTIMATED THROUGHPUT: %f.3" % estimated_throughput)
+        exit()
 	if "print" in sys.argv:
 		tableOutput()
 	else:
