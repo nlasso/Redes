@@ -1,6 +1,6 @@
 Para implementar la herramienta utilizamos paquetes de tipo ICMP.
 
-Primeramente decidimos resolver el registro DNS a su IP correspondiente para evitar considerar el tiempo que pudiera tardar este procedimiento. Además, esto nos permite evitar el posible cambio de rutas producto de alguna universidad usando Round-robin DNS\footnote{https://en.wikipedia.org/wiki/Round-robin_DNS}.
+Primeramente decidimos resolver el registro DNS a su IP correspondiente para evitar considerar el tiempo que pudiera tardar este procedimiento. Además, esto nos permite evitar el posible cambio de rutas producto de alguna universidad usando Round-robin DNS\footnote{https://en.wikipedia.org/wiki/Round-robin\_DNS}.
 
 En el comienzo de nuestra implementación nuestra herramienta explora la ruta completa para estudiar los hosts que pertenecen a la misma.
 Decidimos limitar el crecimiento del time to live a 35 ya que es un poco mayor que la que utilizan las herramientas provistas por Linux.
