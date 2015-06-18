@@ -14,17 +14,17 @@ Durante la experimentación hubieron ciertas anomalías detectadas al correr los
     \end{itemize}
     En este caso, lo que se realizó para constatar este comportamiento previamente fue hacer un \textit{PING()} a los destinos para corroborar si los mismos responden. De esta manera se supo si había muchos hops que no respondían, como sucedía anteriormente, entre la IP de origen y la de destino o si era efectivamente el destino.
     \item Las rutas al mismo destino cambiaban. Al correr muchas veces a la misma IP de destino, nos dimos cuenta que las rutas podían varias con lo cual no era lo suficientemente fiable el cálculo del RTT. Dado esto, cuando se detectaba que una ruta no era igual a la primer ruta obtenida, esta era descartaba y se repetía el llamado al mismo hop con el mismo TTL hasta que se obtenía una respuesta de la primer IP con dicho TTL. De esta forma se aseguró la misma ruta en todos los casos.
-    \item RTTs no lineales, es decir, si bien se supone que a medida que se realizan saltos a hops más lejanos el RTT debería aumentar, esto no siempre sucedía. Al realizar las experimentaciones se notó que para cierto rango de IPs, que pertenecen a la misma región, la diferencia entre los RTT era muy grande. Por ejemplo, para dos IPs en la misma región, la primera con TTL menor, tenía un RTT mayor que la del hop siguiente que tiene un TTL mayor y un RTT significativamente menor. Otro caso que se notó fue para países muy distantes, que se suponen con un enlace submarino y una diferencia en RTTs grande, que tenían una diferencia muy pequeña. Para estos casos, tras revisar las locaciones de las IPs con el uso del sitio web: http://iplocation.net, llegamos a la conclusión de que, si bien hay rangos IPs que pertenecen a la misma región y que deberían estar relativamente cercanos, sucede que la IP física se encuentra realmente en otra locación provocando que se produzca más de un salto transatlántico y que los valores de RTT varíen de esta manera. Estos casos se pueden apreciar en la sección de resultados.  
+    \item RTTs no lineales, es decir, si bien se supone que a medida que se realizan saltos a hops más lejanos el RTT debería aumentar, esto no siempre sucedía. Al realizar las experimentaciones se notó que para cierto rango de IPs, que pertenecen a la misma región, la diferencia entre los RTT era muy grande. Por ejemplo, para dos IPs en la misma región, la primera con TTL menor, tenía un RTT mayor que la del hop siguiente que tiene un TTL mayor y un RTT significativamente menor. Otro caso que se notó fue para países muy distantes, que se suponen con un enlace submarino y una diferencia en RTTs grande, que tenían una diferencia muy pequeña. Para estos casos, tras revisar las locaciones de las IPs con el uso del sitio web: http://iplocation.net, llegamos a la conclusión de que, si bien hay rangos IPs que pertenecen a la misma región y que deberían estar relativamente cercanos, sucede que la IP física se encuentra realmente en otra locación provocando que se produzca más de un salto transatlántico y que los valores de RTT varíen de esta manera. Estos casos se pueden apreciar en la sección de resultados.
 \end{itemize}
 
-Las universidades a las que finalmente se les realizó el tracerout fueron:
+Las universidades a las que finalmente se les realizó el traceroute fueron:
 
 \begin{itemize}
 	\item Universidad de Berkeley, California, EEUU. Con la dirección: berkley.edu
 	\item Perm State University, Rusia. Con la dirección: en.psu.ru
 	\item Iceland University, Iceland. Con la dirección: english.hi.is
 	\item Cochin University of Scienc and Technology, Cochin, India. Con la dirección: cusat.ac.in
-	\item University of Pretoria, Pretoria, South Africa. Con la dirección: up.ac.za 
+	\item University of Pretoria, Pretoria, South Africa. Con la dirección: up.ac.za
 \end{itemize}
 
 Dichas universidades respondieron a los PING previos para realizar la experimentación y todas pertenecen a distintos continentes. Los resultados fueron muy variados. En varias ocaciones hay mas de un salto transatlántico los cuales fueron detectados por los RTT y serán explicados en la sección de resultados.
