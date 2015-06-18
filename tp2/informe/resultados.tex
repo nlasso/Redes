@@ -119,10 +119,10 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \rule{0pt}{1.2em} 200.89.165.222  &  -0.46 & 46.45 & ARGENTINA & Buenos Aires \\[0.2em]
 \rule{0pt}{1.2em} 208.178.244.213  &  -0.52 & 45.05 & ARGENTINA & Buenos Aires \\[0.2em]
 \rule{0pt}{1.2em} 67.17.75.66  &  2.54 & 205.42 & UNITED STATES & Miami \\[0.2em]
-\rule{0pt}{1.2em} 4.68.111.121  &  -1.06 & 175.47 & UNITED STATES & Denver \\[0.2em]
-\rule{0pt}{1.2em} 4.69.158.245  &  1.89 & 301.85 & UNITED STATES & Muskogee \\[0.2em]
-\rule{0pt}{1.2em} 4.69.158.245  &  -0.42 & 305.45 & UNITED STATES & Muskogee \\[0.2em]
-\rule{0pt}{1.2em} 213.242.110.198  &  -0.26 & 317.85 & FRANCE & Savigny-sur-seille \\[0.2em]
+\rule{0pt}{1.2em} 4.68.111.121  &  -1.06 & 175.47 & UNITED STATES & Miami \\[0.2em]
+\rule{0pt}{1.2em} 4.69.158.245  &  1.89 & 301.85 & SWEDEN & Stockholm \\[0.2em]
+\rule{0pt}{1.2em} 4.69.158.245  &  -0.42 & 305.45 & SWEDEN & Stockholm \\[0.2em]
+\rule{0pt}{1.2em} 213.242.110.198  &  -0.26 & 317.85 & SWEDEN & Stockholm \\[0.2em]
 \rule{0pt}{1.2em} 194.85.40.229  &  -0.29 & 328.49 & RUSSIAN FEDERATION & Saint Petersburg \\[0.2em]
 \rule{0pt}{1.2em} 194.226.194.22  &  0.01 & 355.20 & RUSSIAN FEDERATION & Saint Petersburg \\[0.2em]
 \rule{0pt}{1.2em} 212.192.80.57  &  -0.57 & 351.03 & RUSSIAN FEDERATION & Perm \\[0.2em]
@@ -130,7 +130,10 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \hline
  \end{tabular}
 
- Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto. Pero esta vez parece ser necesario un poco más de viaje por EEUU antes del salto trasatlántico, que a su vez parece llevar un tiempo sorprendentemente corto. Creemos que en realidad el salto se produce antes y que hay diferencias entre la realidad y lo que muestran los servicios de geolocalización consultados.
+ Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto.
+ Inicialmente esta ruta fue complicada de analizar, ya que obteníamos un salto transatlántico sorprendentemente corto.
+ Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto. 
+
 
  El throughput estimado para esta ruta fue de 3,923, nuevamente un valor comparativamente alto aunque no tanto como con el enlace con Islandia.
 
@@ -170,7 +173,10 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \hline
  \end{tabular}
 
- Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es ya llegando a África.
+ Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es dentro de Cape Town, en Sudáfrica, cosa extraña, que creemos puede tener que ver con algún tipo de encolamiento o demora asociada a los proveedores sudafricanos, ya que hemos revisado la geolocalización la misma resulta idéntica en varias bases con fechas diferentes de actualización.
+
+ Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales como para verificar
+
 
  El throughput estimado para esta ruta fue de 3,030, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas.
 
