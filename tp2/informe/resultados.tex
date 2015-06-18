@@ -100,10 +100,18 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
  \end{tabular}
 
  Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU, pero eso no parece ocurrir con el que hay entre EEUU y Suecia.
+ Si bien se observa un salto en tiempos en la ruta de costa a costa de EEUU, luego el tiempo para llegar hasta Suecia el salto siguiente, es muy bajo.
+ No hemos podido terminar de detectar a qué se deben estas inconsistencias.
+
 
  El throughput estimado para esta ruta fue de 4,632, el mayor de todas las rutas. Entendemos que tiene que ver con el bajo RTT obtenido y con una buena calidad de la conexión, con nula pérdidas de paquetes.
 
  \includegraphics[width=5in]{imgs/iceland_dist.png}
+ \includegraphics[width=5in]{imgs/maps/iceland2.png}
+
+
+ Inicialmente los datos de geolocalización de esta ruta eran los que se muestran a continuación, que indicaban todos nodos en Miami hasta el salto a Suecia, pero esto no resultaba certero ya que entre los saltos en estados unidos había una variación muy alta (la correspondiente al salto hasta Los Angeles)
+
  \includegraphics[width=5in]{imgs/maps/iceland.png}
 
 \subsection{Perm}
@@ -132,7 +140,7 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 
  Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto.
  Inicialmente esta ruta fue complicada de analizar, ya que obteníamos un salto transatlántico sorprendentemente corto.
- Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto. 
+ Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto.
 
 
  El throughput estimado para esta ruta fue de 3,923, nuevamente un valor comparativamente alto aunque no tanto como con el enlace con Islandia.
@@ -173,9 +181,11 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \hline
  \end{tabular}
 
- Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es dentro de Cape Town, en Sudáfrica, cosa extraña, que creemos puede tener que ver con algún tipo de encolamiento o demora asociada a los proveedores sudafricanos, ya que hemos revisado la geolocalización la misma resulta idéntica en varias bases con fechas diferentes de actualización.
+ Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es dentro de Cape Town, en Sudáfrica, cosa extraña.
+ Creemos puede tener que ver con algún tipo error de geolocalización, aunque en varias bases de datos con fechas diferentes de actualización la localización resultaba consistente.
+ La demora inducida en estos saltos pareciera muy grande para tratarse de demoras de encolamiento o situaciones similares en loops locales de Sudáfrica.
 
- Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales como para verificar
+ Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales como para verificar mejor esta situación. Estos checkeos nos dieron resultados similares a los calculados por nuestra herramienta. Aproximadamente 175ms de diferencia.
 
 
  El throughput estimado para esta ruta fue de 3,030, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas.
