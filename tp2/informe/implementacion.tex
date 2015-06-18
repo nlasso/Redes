@@ -20,6 +20,6 @@ Para simular el throughput utilizamos la ecuación de Mathis
 $$\frac{MSS}{EstimatedRTT * \frac{1}{\sqrt{EstimatedPacketLossProbability}}}$$
 donde $EstimatedRTT$ se obtiene iterando sucesivas veces la ecuación
 $$\alpha * EstimatedRTT + (1 - \alpha) * SampleRTT$$
-y $EstimatedPacketLossProbability$ se calcula como $$\frac{\#Echo reply}{\#Echo request}$$.
+y $EstimatedPacketLossProbability$ se calcula como $$\frac{\#Echo reply}{\#Echo request}$$
 
 Para elegir el valor del $\alpha$ y de la cantidad de iteraciones de la ecuación que calcula el RTT ($n$) realizamos pruebas con $alpha =$ 0,1; 0,2; ... ; 1 y $n =$ 10, 20, ... , 50, obteniendo los mejores resultados con $\alpha = 0,5$ y $n = 50$.
