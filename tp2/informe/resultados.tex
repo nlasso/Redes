@@ -34,6 +34,8 @@ Para los gráficos usamos el teorema central del limite, dado que tomamos sufici
 \hline
  \end{tabular}
 
+~
+
 Podemos observar el fenómeno ya mencionado sobre RTTs menores en saltos posteriores.
 
 Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una diferencia de RTTs sustancial, y esto se ve reflejado en el valor del ZRTT que muestra que se aleja casi tres desvíos standard de la media.
@@ -64,21 +66,23 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \hline
  \end{tabular}
 
- En una primera instancia, notamos que el IP 195.22.220.152 fue marcado como Italiano pero su RTT era demasiado bajo. Verificando contra otras bases de localizacion de IP, comprobamos que efectivamente el nodo se encuentra en Argentina, si bien su rango pertenece a Italia, ya que el ISP dueño es una corporacion Italiana.
+~
 
- Nuevamente vemos una correspondencia entre el salto más largo, trasatlántico esta vez, y la diferencia entre RTTs, reflejada a su vez por el valor de ZRTT. Sin embargo también vemos una diferencia similar entre dos puntos supuestamente cercanos, y una diferencia negativa entre dos puntos supuestamente alejados.
+En una primera instancia, notamos que el IP 195.22.220.152 fue marcado como Italiano pero su RTT era demasiado bajo. Verificando contra otras bases de localizacion de IP, comprobamos que efectivamente el nodo se encuentra en Argentina, si bien su rango pertenece a Italia, ya que el ISP dueño es una corporacion Italiana.
 
- El valor del throughput estimado para esta ruta fue de 3,203. Comparándolo con el anterior, que el valor absoluto de RTT de la ruta sea mucho mayor afecta directamente al throughput obtenido.
+Nuevamente vemos una correspondencia entre el salto más largo, trasatlántico esta vez, y la diferencia entre RTTs, reflejada a su vez por el valor de ZRTT. Sin embargo también vemos una diferencia similar entre dos puntos supuestamente cercanos, y una diferencia negativa entre dos puntos supuestamente alejados.
 
- \includegraphics[width=5in]{imgs/cusat_dist.png}
- \includegraphics[width=5in]{imgs/maps/cusat.png}
+El valor del throughput estimado para esta ruta fue de 3,203. Comparándolo con el anterior, que el valor absoluto de RTT de la ruta sea mucho mayor afecta directamente al throughput obtenido.
+
+\includegraphics[width=5in]{imgs/cusat_dist.png}
+\includegraphics[width=5in]{imgs/maps/cusat.png}
 
 \subsection{Reykjavik, Iceland}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
- \hline
- \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
- \hline
+\hline
+\rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+\hline
 
 \rule{0pt}{1.2em} 192.168.2.1  &  0.53 & 37.3 & (Private Address) & (Private Address) \\[0.2em]
 \rule{0pt}{1.2em} 200.89.164.153  &  -0.24 & 45.36 & ARGENTINA & Buenos Aires \\[0.2em]
@@ -97,29 +101,30 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \rule{0pt}{1.2em} 130.208.18.174  &  -0.29 & 314.75 & ICELAND & Reykjavik \\[0.2em]
 \rule{0pt}{1.2em} 130.208.165.207  &  -0.53 & 309.26 & ICELAND & Reykjavik \\[0.2em]
 \hline
- \end{tabular}
+\end{tabular}
 
- Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU, pero eso no parece ocurrir con el que hay entre EEUU y Suecia.
- Si bien se observa un salto en tiempos en la ruta de costa a costa de EEUU, luego el tiempo para llegar hasta Suecia el salto siguiente, es muy bajo.
- No hemos podido terminar de detectar a qué se deben estas inconsistencias.
+~
 
-
- El throughput estimado para esta ruta fue de 4,632, el mayor de todas las rutas. Entendemos que tiene que ver con el bajo RTT obtenido y con una buena calidad de la conexión, con nula pérdidas de paquetes.
-
- \includegraphics[width=5in]{imgs/iceland_dist.png}
- \includegraphics[width=5in]{imgs/maps/iceland2.png}
+Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU, pero eso no parece ocurrir con el que hay entre EEUU y Suecia.
+Si bien se observa un salto en tiempos en la ruta de costa a costa de EEUU, luego el tiempo para llegar hasta Suecia el salto siguiente, es muy bajo.
+No hemos podido terminar de detectar a qué se deben estas inconsistencias.
 
 
- Inicialmente los datos de geolocalización de esta ruta eran los que se muestran a continuación, que indicaban todos nodos en Miami hasta el salto a Suecia, pero esto no resultaba certero ya que entre los saltos en estados unidos había una variación muy alta (la correspondiente al salto hasta Los Angeles)
+El throughput estimado para esta ruta fue de 4,632, el mayor de todas las rutas. Entendemos que tiene que ver con el bajo RTT obtenido y con una buena calidad de la conexión, con nula pérdidas de paquetes.
 
- \includegraphics[width=5in]{imgs/maps/iceland.png}
+\includegraphics[width=5in]{imgs/iceland_dist.png}
+\includegraphics[width=5in]{imgs/maps/iceland2.png}
+
+Inicialmente los datos de geolocalización de esta ruta eran los que se muestran a continuación, que indicaban todos nodos en Miami hasta el salto a Suecia, pero esto no resultaba certero ya que entre los saltos en estados unidos había una variación muy alta (la correspondiente al salto hasta Los Angeles)
+
+\includegraphics[width=5in]{imgs/maps/iceland.png}
 
 \subsection{Perm, Rusia}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
- \hline
- \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
- \hline
+\hline
+\rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+\hline
 
 \rule{0pt}{1.2em} 192.168.2.1  &  0.36 & 35.15 & (Private Address) & (Private Address) \\[0.2em]
 \rule{0pt}{1.2em} 200.89.166.161  &  -0.30 & 45.49 & ARGENTINA & Buenos Aires \\[0.2em]
@@ -136,24 +141,25 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \rule{0pt}{1.2em} 212.192.80.57  &  -0.57 & 351.03 & RUSSIAN FEDERATION & Perm \\[0.2em]
 \rule{0pt}{1.2em} 212.192.64.44  &  -0.37 & 357.50 & RUSSIAN FEDERATION & Perm \\[0.2em]
 \hline
- \end{tabular}
+\end{tabular}
 
- Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto.
- Inicialmente esta ruta fue complicada de analizar, ya que obteníamos un salto transatlántico sorprendentemente corto.
- Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto.
+~
 
+Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto.
+Inicialmente esta ruta fue complicada de analizar, ya que obteníamos un salto transatlántico sorprendentemente corto.
+Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto.
 
- El throughput estimado para esta ruta fue de 3,923, nuevamente un valor comparativamente alto aunque no tanto como con el enlace con Islandia.
+El throughput estimado para esta ruta fue de 3,923, nuevamente un valor comparativamente alto aunque no tanto como con el enlace con Islandia.
 
- \includegraphics[width=5in]{imgs/perm_dist.png}
- \includegraphics[width=5in]{imgs/maps/perm.png}
+\includegraphics[width=5in]{imgs/perm_dist.png}
+\includegraphics[width=5in]{imgs/maps/perm.png}
 
 \subsection{Pretoria, South Africa}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
- \hline
- \rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
- \hline
+\hline
+\rule{0pt}{1.2em}IP & ZRTT & AVG\_RTT & PAIS & CIUDAD\\[0.2em]
+\hline
 
 \rule{0pt}{1.2em} 192.168.2.1  &  0.42 & 35.29 & (Private Address) & (Private Address) \\[0.2em]
 \rule{0pt}{1.2em} 200.89.164.177  &  -0.20 & 45.07 & ARGENTINA & Buenos Aires \\[0.2em]
@@ -179,16 +185,18 @@ Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una 
 \rule{0pt}{1.2em} 137.215.99.2  &  -0.17 & 484.43 & SOUTH AFRICA & Pretoria \\[0.2em]
 \rule{0pt}{1.2em} 137.215.10.70  &  -0.45 & 480.05 & SOUTH AFRICA & Pretoria \\[0.2em]
 \hline
- \end{tabular}
+\end{tabular}
 
- Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es dentro de Cape Town, en Sudáfrica, cosa extraña.
- Creemos puede tener que ver con algún tipo error de geolocalización, aunque en varias bases de datos con fechas diferentes de actualización la localización resultaba consistente.
- La demora inducida en estos saltos pareciera muy grande para tratarse de demoras de encolamiento o situaciones similares en loops locales de Sudáfrica.
+~
 
- Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales (comando ping de Linux) como para verificar mejor esta situación puntualmente. Estos checkeos nos dieron resultados similares a los calculados por nuestra herramienta. Aproximadamente 175ms de diferencia.
+Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es dentro de Cape Town, en Sudáfrica, cosa extraña.
+Creemos puede tener que ver con algún tipo error de geolocalización, aunque en varias bases de datos con fechas diferentes de actualización la localización resultaba consistente.
+La demora inducida en estos saltos pareciera muy grande para tratarse de demoras de encolamiento o situaciones similares en loops locales de Sudáfrica.
+
+Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales (comando ping de Linux) como para verificar mejor esta situación puntualmente. Estos checkeos nos dieron resultados similares a los calculados por nuestra herramienta. Aproximadamente 175ms de diferencia.
 
 
- El throughput estimado para esta ruta fue de 3,030, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas.
+El throughput estimado para esta ruta fue de 3,030, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas.
 
- \includegraphics[width=5in]{imgs/pretoria_dist.png}
- \includegraphics[width=5in]{imgs/maps/pretoria.png}
+\includegraphics[width=5in]{imgs/pretoria_dist.png}
+\includegraphics[width=5in]{imgs/maps/pretoria.png}
