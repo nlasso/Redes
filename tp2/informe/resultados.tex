@@ -1,6 +1,11 @@
-Presentamos aquí los resultados obtenidos para cada ruta.
+Presentamos aquí los resultados obtenidos para cada ruta. Notar que incluímos el valor promedio del RTT absoluto de la computadora local hasta cada salto, pero como ya fue mencionado calculamos el ZRTT usando la diferencia de RTT entre un salto y el siguiente.
 
-Berkeley:
+\subsection{Resultados generales}
+ En todas nuestras pruebas en valor de $MSS$ obtenido fue de 1452, pero lo calculamos programáticamente antes de cada test para asegurarnos de usar el real en cada sistema utilizado. 
+ 
+ En todos los casos la cantidad de paquetes perdidos fue muy baja (máximo 2 de 50) por lo que no se incluye el valor de $EstimatedPacketLossProbability$ en los resultados específicos de cada ruta.
+ 
+\subsection{Berkeley}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
  \hline
@@ -24,7 +29,13 @@ Berkeley:
 \hline
  \end{tabular}
 
-Cusat:
+Podemos observar el fenómeno ya mencionado sobre RTTs menores en saltos posteriores.
+
+Efectivamente el salto más grande (de Argentina a EEUU) se corresponde con una diferencia de RTTs sustancial, y esto se ve reflejado en el valor del ZRTT que muestra que se aleja casi tres desvíos standard de la media.
+
+ El valor del throughput estimado para esta ruta fue de 3,864, lo cual por ahora no nos dice mucho pero será relevante al compararlo con las demás rutas.
+ 
+\subsection{Cusat}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
  \hline
@@ -44,9 +55,13 @@ Cusat:
 \hline
  \end{tabular}
 
- En una primera instancia, notamos que el IP 195.22.220.152 fue marcado como Italiano pero su RTT es demasiado bajo. Verificando contra otras bases de localizacion de IP, comprobamos que efectivamente el nodo se encuentra en Argentina. Si bien su rango pertenece a Italia, ya que el ISP dueño es una corporacion Italiana, se encuentra fisicamente localizado en Argentina. 
+ En una primera instancia, notamos que el IP 195.22.220.152 fue marcado como Italiano pero su RTT era demasiado bajo. Verificando contra otras bases de localizacion de IP, comprobamos que efectivamente el nodo se encuentra en Argentina, si bien su rango pertenece a Italia, ya que el ISP dueño es una corporacion Italiana. 
 
-Islandia:
+ Nuevamente vemos una correspondencia entre el salto más largo, trasatlántico esta vez, y la diferencia entre RTTs, reflejada a su vez por el valor de ZRTT. Sin embargo también vemos una diferencia similar entre dos puntos supuestamente cercanos, y una diferencia negativa entre dos puntos supuestamente alejados.
+ 
+ El valor del throughput estimado para esta ruta fue de 3,203. Comparándolo con el anterior, que el valor absoluto de RTT de la ruta sea mucho mayor afecta directamente al throughput obtenido.
+ 
+\subsection{Islandia}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
  \hline
@@ -72,7 +87,11 @@ Islandia:
 \hline
  \end{tabular}
 
-Perm:
+ Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU, pero eso no parece ocurrir con el que hay entre EEUU y Suecia.
+ 
+ El throughput estimado para esta ruta fue de 4,632, el mayor de todas las rutas. Entendemos que tiene que ver con el bajo RTT obtenido y con una buena calidad de la conexión, con casi nulas pérdidas de paquetes.
+ 
+\subsection{Perm}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
  \hline
@@ -95,8 +114,12 @@ Perm:
 \rule{0pt}{1.2em} 212.192.64.44  &  -0.37 & 357.50 & RUSSIAN FEDERATION & Perm \\[0.2em]
 \hline
  \end{tabular}
+ 
+ Nuevamente hace falta ``pasar por'' Miami para llegar a Europa, y una vez más el ZRTT es consistente con este salto. Pero esta vez parece ser necesario un poco más de viaje por EEUU antes del salto trasatlántico, que a su vez parece llevar un tiempo sorprendentemente corto. Creemos que en realidad el salto se produce antes y que hay diferencias entre la realidad y lo que muestran los servicios de geolocalización consultados.
 
-Pretoria:
+ El throughput estimado para esta ruta fue de 3,923.
+
+\subsection{Pretoria}
 
 \begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}
  \hline
@@ -128,3 +151,7 @@ Pretoria:
 \rule{0pt}{1.2em} 137.215.10.70  &  -0.45 & 480.05 & SOUTH AFRICA & Pretoria \\[0.2em]
 \hline
  \end{tabular}
+ 
+ Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esta vez el salto trasatlántico sí tiene un ZRTT grande (más de un desvío standard) y el otro salto significativo es ya llegando a África.
+ 
+ El throughput estimado para esta ruta fue de 3,030.
