@@ -124,51 +124,51 @@ def get_mss():
             return value
 
 def tableOutput(hops, zrtts, avg_rtts, nombre, nombreIPs):
-	ipFile = open(nombreIPs, 'w')
-	myFile = open(nombre, 'w')
-	latexHeader = '\\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}\n'
-	hline = '\\hline\n'
-	tableHeader = '\\rule{0pt}{1.2em}IP & ZRTT & AVG\\_RTT & PAIS & CIUDAD\\\\[0.2em]\n'
-	latexFooter = '\\end{tabular}\n'
-	print(latexHeader, hline, tableHeader, hline, file=myFile)
+    ipFile = open(nombreIPs, 'w')
+    myFile = open(nombre, 'w')
+    latexHeader = '\\begin{tabular}{|c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c@{\hspace{5ex}}c|}\n'
+    hline = '\\hline\n'
+    tableHeader = '\\rule{0pt}{1.2em}IP & ZRTT & AVG\\_RTT & PAIS & CIUDAD\\\\[0.2em]\n'
+    latexFooter = '\\end{tabular}\n'
+    print(latexHeader, hline, tableHeader, hline, file=myFile)
 
-	for i, hop in enumerate(hops):
-		url = 'http://api.hostip.info/get_json.php?ip=' + hop
-		response = urllib.request.urlopen(url).read().decode("utf-8")
-		temp = json.loads(response)
-		city = temp['city']
-		country = temp['country_name']
-		print('\\rule{0pt}{1.2em}', hop, ' & ', zrtts[i], '&', avg_rtts[i], '&' ,country , '&' , city, '\\\\[0.2em]', file=myFile)
-		print(hop,',',zrtts[i],',',avg_rtts[i],',',country,',',city,',', file=ipFile)
+    for i, hop in enumerate(hops):
+        url = 'http://api.hostip.info/get_json.php?ip=' + hop
+        response = urllib.request.urlopen(url).read().decode("utf-8")
+        temp = json.loads(response)
+        city = temp['city']
+        country = temp['country_name']
+        print('\\rule{0pt}{1.2em}', hop, ' & ', zrtts[i], '&', avg_rtts[i], '&' ,country , '&' , city, '\\\\[0.2em]', file=myFile)
+        print(hop,',',zrtts[i],',',avg_rtts[i],',',country,',',city,',', file=ipFile)
 
-	print(hline, latexFooter, file=myFile)
-	myFile.close()
-	ipFile.close()
+    print(hline, latexFooter, file=myFile)
+    myFile.close()
+    ipFile.close()
 
 if __name__ == "__main__":
-	assert len(sys.argv) >= 2, "You must provide a target"
-	if "test" in sys.argv:
-		target = sys.argv[2]
-		for alpha in [i*0.1 for i in range(1, 10)]:
-			print("ALPHA: ", alpha)
-			for reps in range(10, 60, 10):
-				print("\tREPS: ", reps)
-				estimated_rtt, estimated_throughput = test_connection(target)
-				print("\t\tESTIMATED RTT: %f.3" % estimated_rtt)
-				print("\t\tESTIMATED THROUGHPUT: %f.3" % estimated_throughput)
+    assert len(sys.argv) >= 2, "You must provide a target"
+    if "test" in sys.argv:
+        target = sys.argv[2]
+        for alpha in [i*0.1 for i in range(1, 10)]:
+            print("ALPHA: ", alpha)
+            for reps in range(10, 60, 10):
+                print("\tREPS: ", reps)
+                estimated_rtt, estimated_throughput = test_connection(target)
+                print("\t\tESTIMATED RTT: %f.3" % estimated_rtt)
+                print("\t\tESTIMATED THROUGHPUT: %f.3" % estimated_throughput)
         exit()
-	if "print" in sys.argv:
-		tableOutput()
-	else:
-		if len(sys.argv) < 3:
-			reps = 1
-		else:
-			reps = int(sys.argv[2])
-		zrtts, avg_rtts, hops = main(sys.argv[1], reps)
-		#Print to file
-		tableOutput(hops, zrtts, avg_rtts, sys.argv[3], sys.argv[4])
-		#Print output to console
-		for i, hop in enumerate(hops):
-			print(hop)
-			print("\tZRTT:", zrtts[i])
-			print("\tAVG RTT:", avg_rtts[i])
+    if "print" in sys.argv:
+        tableOutput()
+    else:
+        if len(sys.argv) < 3:
+            reps = 1
+        else:
+            reps = int(sys.argv[2])
+        zrtts, avg_rtts, hops = main(sys.argv[1], reps)
+        #Print to file
+        tableOutput(hops, zrtts, avg_rtts, sys.argv[3], sys.argv[4])
+        #Print output to console
+        for i, hop in enumerate(hops):
+            print(hop)
+            print("\tZRTT:", zrtts[i])
+            print("\tAVG RTT:", avg_rtts[i])
