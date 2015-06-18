@@ -1,12 +1,8 @@
-Para normalizar los datos para el análisis calculamos el valor Z del RTT de cada hop\footnote{Recordar que nos estamos refiriendo a la diferencia entre el RTT absoluto de un hop y el anterior}, que nos da una idea de cuánto se aleja cada RTT de la media, medido en desvíos standard. Para ello usamos la ecuación facilitada por el enunciado: $$ ZRTT_i = \dfrac{RTT_i-\overline{RTT}}{SRTT}$$ donde $\overline{RTT}$ es el promedio y $SRTT$ el desvío standard de la distribución de los RTTs para una ruta dada.
-
-Esto nos permite analizar los saltos con una información estadísticamente más sólida que la diferencia absoluta medida en $ms$.
-
 Durante la experimentación hubieron ciertas anomalías detectadas al correr los experimentos. Las mismas fueron:
 
 \begin{itemize}
     \item Hops que no respondían. En base a este problema se generó la hipótesis de que había hops en los cuales los paquetes ICMP enviados llegaban con un \textit{Time-Exceeded} a un router que estaba configurado para no responder a estos paquetes o para filtrarlos directamente. En base a esto se configuró el método \textit{SR1()} de Scapy pa ra que dado cierto \textit{Timeout} el mismo dejara de esperar a que el router le respondiera permitiéndonos aumentar el TTL y llegar al siguiente Hop.
-    \item Corridas en las cuales no se llegaba a ningún destino haciendo que el script nunca terminara incluso aumentando el TTL y el tiempo de Timeout. Con la misma Hipótesis que la anterior, realizando experimentaciones a diferentes universidades, hubieron algunas, como las que se muestran a continuación, cuyo servidor estaba configurado para no responder. Por ejemplo:
+    \item Corridas en las cuales no se llegaba a ningún destino haciendo que el script nunca terminara incluso aumentando el TTL y el tiempo de Timeout. Con la misma Hipotesis que la anterior, realizando experimentaciones a diferentes universidades, hubieron algunas como las que se muestran a continuación, entre otras, cuyo servidor estaba configurado para no responder:
     \begin{itemize}
         \item Universidad de Tokio
         \item Melbourne University
@@ -16,14 +12,3 @@ Durante la experimentación hubieron ciertas anomalías detectadas al correr los
     \item Las rutas al mismo destino cambiaban. Al correr muchas veces a la misma IP de destino, nos dimos cuenta que las rutas podían varias con lo cual no era lo suficientemente fiable el cálculo del RTT. Dado esto, cuando se detectaba que una ruta no era igual a la primer ruta obtenida, esta era descartaba y se repetía el llamado al mismo hop con el mismo TTL hasta que se obtenía una respuesta de la primer IP con dicho TTL. De esta forma se aseguró la misma ruta en todos los casos.
 \end{itemize}
 
-Las universidades a las que finalmente se les realizó el tracerout fueron:
-
-\begin{itemize}
-	\item Universidad de Berkeley, California, EEUU. Con la dirección: berkley.edu
-	\item Perm State University, Rusia. Con la dirección: en.psu.ru
-	\item Iceland University, Iceland. Con la dirección: english.hi.is
-	\item Cochin University of Scienc and Technology, Cochin, India. Con la dirección: cusat.ac.in
-	\item University of Pretoria, Pretoria, South Africa. Con la dirección: up.ac.za 
-\end{itemize}
-
-Dichas universidades respondieron a los PING previos para realizar la experimentación y todas pertenecen a distintos continentes. Los resultados fueron muy variados. En varias ocaciones hay mas de un salto transatlántico los cuales fueron detectados por los RTT y serán explicados en la sección de resultados.
