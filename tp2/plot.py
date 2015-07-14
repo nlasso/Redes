@@ -64,7 +64,7 @@ data = []
 with open(sys.argv[1]) as f:
     lineas = f.readlines()
 for linea in lineas:
-    valores = linea.split(" , ")
+    valores = linea.split(",")
     tupla = (valores[0], valores[3], valores[1])
     data.append(tupla)
 plot_zrtt_treshold(data, output_path)
