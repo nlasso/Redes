@@ -1,0 +1,39 @@
+#!/usr/bin/gnuplot
+##########################################
+##				HI					##
+##########################################
+reset
+set terminal pdf
+set output 'hi.pdf'
+
+set encoding iso_8859_1
+
+# Escala logarítmica:
+# set logscale x
+# set logscale y
+# set logscale xy
+# 
+# set nologscale x
+# set nologscale y
+# set nologscale xy 
+
+set xlabel "Repeticiones"
+set ylabel "RTT Estimado"
+set autoscale
+#set yrange [0:31]
+
+set title "Iceland"
+set key reverse right bottom inside
+set grid
+
+set style data linespoints
+
+#plot [raw_data] using [x value's column in data file]:[y value's column in data files] title [item's name], ...
+plot "hi_throughput_A0.1.gdat" using 1:2 title "A=0.1" linecolor rgb "red" pt 7 ps 0.1, \
+"hi_throughput_A0.3.gdat" using 1:2 title "A=0.3" linecolor rgb "blue" pt 7 ps 0.1, \
+"hi_throughput_A0.5.gdat" using 1:2 title "A=0.5" linecolor rgb "#006400" pt 7 ps 0.1, \
+"hi_throughput_A0.7.gdat" using 1:2 title "A=0.7" linecolor rgb "#B8860B" pt 7 ps 0.1, \
+"hi_throughput_A0.9.gdat" using 1:2 title "A=0.9" linecolor rgb "#4B0082" pt 7 ps 0.1, \
+309 title "Avg RTT" linecolor rgb "black"
+#"hi_throughput_A0.8.gdat" using 1:2 title "A=0.8" linecolor rgb "black" pt 7 ps 0.1, \
+#"hi_throughput_A0.9.gdat" using 1:2 title "A=0.9" linecolor rgb "orange" pt 7 ps 0.1
