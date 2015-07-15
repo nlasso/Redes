@@ -16,7 +16,7 @@ echo "Completado Islandia (Islandia)"
 #./main.py test u-tokyo.ac.jp > results/tokyo_throughput.dat
 #echo "Completado Tokyo (Japon)"
 
-./main.py cusat.ac.in 50 "results/cusat.txt" "results/cusatIPs.txt" > results/cusat.dat # Universidad de Tokyo, Japón
+./main.py cusat.ac.in 50 "results/cusat.txt" "results/cusatIPs.txt" > results/cusat.dat
 ./main.py test cusat.ac.in > results/cusat_throughput.dat
 echo "Completado Cusat (India)"
 
