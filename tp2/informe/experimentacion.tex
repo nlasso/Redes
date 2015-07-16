@@ -1,13 +1,9 @@
-Para normalizar los datos para el análisis calculamos el valor Z del RTT de cada hop\footnote{Recordar que nos estamos refiriendo a la diferencia entre el RTT absoluto de un hop y el anterior}, que nos da una idea de cuánto se aleja cada RTT de la media, medido en desvíos standard. Para ello usamos la ecuación facilitada por el enunciado: $$ ZRTT_i = \dfrac{RTT_i-\overline{RTT}}{SRTT}$$ donde $\overline{RTT}$ es el promedio y $SRTT$ el desvío standard de la distribución de los RTTs para una ruta dada.
-
-Esto nos permite analizar los saltos con una información estadísticamente más sólida que la diferencia absoluta medida en $ms$.
-
-Durante la experimentación hubieron ciertas anomalías detectadas al correr los experimentos. Las mismas fueron:
+Durante la experimentación encontramos ciertas anomalías detectadas al correr los experimentos. Las mismas fueron:
 
 \begin{itemize}
     \item Hops que no respondían. En base a este problema se generó la hipótesis de que había hops en los cuales los paquetes ICMP enviados llegaban con un \textit{Time-Exceeded} a un router que estaba configurado para no responder a estos paquetes o para filtrarlos directamente. En base a esto se configuró el método \textit{SR1()} de Scapy para que dado cierto \textit{Timeout} el mismo dejara de esperar a que el router le respondiera permitiéndonos aumentar el TTL y llegar al siguiente Hop.
     
-    \item Corridas en las cuales no se llegaba a ningún destino haciendo que el script nunca terminara incluso aumentando el TTL y el tiempo de Timeout. Con la misma Hipótesis que la anterior, realizando experimentaciones a diferentes universidades, hubieron algunas, como las que se muestran a continuación, cuyo servidor estaba configurado para no responder. Por ejemplo:
+    \item Corridas en las cuales no se llegaba a ningún destino haciendo que el script nunca terminara incluso aumentando el TTL y el tiempo de Timeout. Con la misma hipótesis que la anterior, realizando experimentaciones a diferentes universidades, hubo algunas, como las que se muestran a continuación, cuyo servidor estaba configurado para no responder. Por ejemplo:
     \begin{itemize}
         \item Universidad de Tokio
         \item Melbourne University
@@ -15,13 +11,15 @@ Durante la experimentación hubieron ciertas anomalías detectadas al correr los
     \end{itemize}
     En este caso, lo que se realizó para constatar este comportamiento previamente fue hacer un \textit{PING()} a los destinos para corroborar si los mismos responden. De esta manera se supo si había muchos hops que no respondían, como sucedía anteriormente, entre la IP de origen y la de destino o si era efectivamente el destino.
 
-    \item Las rutas al mismo destino cambiaban. Al correr muchas veces a la misma IP de destino, nos dimos cuenta que las rutas podían varias con lo cual no era lo suficientemente fiable el cálculo del RTT. Dado esto, cuando se detectaba que una ruta no era igual a la primer ruta obtenida, esta era descartaba y se repetía el llamado al mismo hop con el mismo TTL hasta que se obtenía una respuesta de la primer IP con dicho TTL. De esta forma se aseguró la misma ruta en todos los casos. Podriamos, alternativamente, luego de fijar la ruta realizar los pings directamente a los hops de forma tal de medir sus RTT, pero preferimos no utilizar esta alternativa ya que la ruta hacia uno de los hops puede cambiar drasticamente y en pruebas preliminares lo pudimos corroborar.
+    \item Las rutas al mismo destino cambiaban. Al correr muchas veces a la misma IP de destino notamos que las rutas podían variar, con lo cual no era lo suficientemente fiable el cálculo del RTT. Dado esto, implementamos una verificación para descartar una corrida cuando se detectaba que una ruta no era igual a la primer ruta obtenida. De esta forma se aseguró la misma ruta en todos los casos. Otra solución posible hubiese sido enviar los paquetes directamente a los hops una vez fijada la ruta, pero preferimos no utilizar esta alternativa ya que la ruta directa hacia cada uno de los hops puede ser muy disinta a la que nos llevaba a ellos cuando nuestro destino era otro (corroborado en pruebas preliminares).
     
-    \item RTTs no lineales, es decir, si bien se supone que a medida que se realizan saltos a hops más lejanos el RTT debería aumentar, esto no siempre sucedía. Al realizar las experimentaciones se notó que para cierto rango de IPs, que pertenecen a la misma región, la diferencia entre los RTT era muy grande. Por ejemplo, para dos IPs en la misma región, la primera con TTL menor, tenía un RTT mayor que la del hop siguiente que tiene un TTL mayor y un RTT significativamente menor. Otro caso que se notó fue para países muy distantes, que se suponen con un enlace submarino y una diferencia en RTTs grande, que tenían una diferencia muy pequeña. Para estos casos, tras revisar las locaciones de las IPs con el uso del sitio web: http://iplocation.net, llegamos a la conclusión de que, si bien hay rangos IPs que pertenecen a la misma región y que deberían estar relativamente cercanos, sucede que la IP física se encuentra realmente en otra locación provocando que se produzca más de un salto transatlántico y que los valores de RTT varíen de esta manera. Estos casos se pueden apreciar en la sección de resultados.
+    \item RTTs no lineales, es decir, si bien se supone que a medida que se realizan saltos a hops más lejanos el RTT debería aumentar, esto no siempre sucedía. Al realizar las experimentaciones se notó que para cierto rango de IPs que pertenecen a la misma región la diferencia entre los RTTs podía ser negativa. Esto puede deberse a que muchos routers encolan las respuestas de ICMP de modo tal que tardan mucho más en responderlas que en reenviarlas. Para confirmarlo o descartarlo, como trabajo futuro se podría implementar el mismo \textit{traceroute} pero con paquetes TCP.
+    
+    \item Otra anomalía ocurría cuando para hops muy distantes la diferencia era muy pequeña. Tras revisar las locaciones de las IPs llegamos a la conclusión de que, si bien hay rangos IPs que pertenecen a la misma región y que deberían estar relativamente cercanos, sucede que la IP física se encuentra realmente en otra locación provocando que se produzca más de un salto transatlántico y que los valores de RTT varíen de esta manera. Estos casos se pueden apreciar en la sección de resultados.    
 
 \end{itemize}
 
-Las universidades a las que finalmente se les realizó el tracerout fueron:
+Las universidades a las que finalmente se les realizó el traceroute fueron:
 
 \begin{itemize}
 	\item Universidad de Berkeley, California, EEUU. Con la dirección: berkeley.edu
@@ -31,18 +29,6 @@ Las universidades a las que finalmente se les realizó el tracerout fueron:
 	\item University of Pretoria, Pretoria, South Africa. Con la dirección: up.ac.za 
 \end{itemize}
 
+Dichas universidades respondieron a los PING previos para realizar la experimentación y todas pertenecen a distintos continentes.
 
-Dichas universidades respondieron a los PING previos para realizar la experimentación y todas pertenecen a distintos continentes. Los resultados fueron muy variados. En varias ocaciones hay mas de un salto transatlántico los cuales fueron detectados por los RTT y serán explicados en la sección de resultados.
-
-~
-
-Para cada ruta elegida realizamos una tabla con los resultados crudos, un gráfico con puntos representando cada salto y un mapa que marca la ruta geográfica que traza la conexión establecida. En las tablas, notar que incluímos el valor promedio del RTT absoluto de la computadora local hasta cada salto, pero como ya fue mencionado calculamos el ZRTT usando la diferencia de RTT entre un salto y el siguiente.
-
-~
-
-Para resolver la geolocalización, dato presente también en la tabla, si bien inicialmente decidimos incorporar una parte de código que obtuviera la información para cada IP, esto luego nos trajo problemas ya que la diferencia entre los RTT no coincidia con la geolocalización del salto, este problema ya lo explicacamos en el parráfo de RTT no lineales. La herramienta que nos permitió encontrar estas inconsistencias fue IPLocation\footnote{http://www.iplocation.net/}, un meta-buscador que realizaba consultas a la base de IP2Location\footnote{http://www.ip2location.com/} actualizada el 01/06/2015. En los mapas, los saltos dentro de una misma ciudad fueron despreciados y no aparecen representados.
-
-~
-
-El throughput lo simulamos mediante la ecuación de Mathis, descripta en la sección de implementación. Para elegir el valor del $\alpha$ y de la cantidad de iteraciones de la ecuación que calcula el EstimatedRTT ($n$) realizamos pruebas con $\alpha =$ 0,1; 0,2; ... ; 1 y $n =$ 10, 20, ... , 50, obteniendo los mejores resultados con $\alpha = 0,5$ y $n = 50$.
-
+El throughput fue estimado mediante la ecuación de Mathis, descripta en la sección de implementación. Para elegir el valor del $\alpha$ y de la cantidad de iteraciones de la ecuación que calcula el EstimatedRTT ($n$) realizamos pruebas con $\alpha =$ 0,1; 0,2; ... ; 1 y $n =$ 10, 20, ... , 50.

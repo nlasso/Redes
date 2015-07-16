@@ -1,28 +1,20 @@
-Para implementar la herramienta utilizamos paquetes de tipo ICMP.
-Primeramente decidimos resolver el registro DNS a su IP correspondiente para evitar considerar el tiempo que pudiera tardar este procedimiento. Además, esto nos permite evitar el posible cambio de rutas producto de alguna universidad usando Round-robin DNS\footnote{https://en.wikipedia.org/wiki/Round-robin\_DNS}.
+Los fundamentos del $traceroute$ son muy sencillos. Se utilizan paquetes IP para recorrer la ruta aumentando de un salto a la vez. Esto se hace por medio del campo TTL (\textit{Time to live}) que nos permite configurar la cantidad máxima de ``saltos'' que se le permiten al paquete para llegar a destino. Cuando un router recibe un paquete para redireccionarlo, previo a esto decrementa en 1 su TTL, si el mismo resulta igual a 0 entonces devuelve el mensaje \textbf{ICMP Time Exceeded} a la dirección de origen. La herramienta se basa en este comportamiento para obtener la información de la ruta. La misma envía varios paquetes incrementando el TTL progresivamente desde 1 hasta que el paquete efectivamente llega a destino, y va registrando los paquetes de respuesta \textbf{ICMP Time Exceeded} que recibe de cada router.
 
-~
+Esta herramienta se puede implementar con paquetes ICMP, TCP o UDP, según necesidad. La herramienta default que se ofrece en cualquier distribución de Linux permite realizar el procedimiento con los tres tipos de paquetes. Para implementar la herramienta utilizamos paquetes de tipo ICMP. Primeramente decidimos resolver el registro DNS a su IP correspondiente para evitar considerar el tiempo que pudiera tardar este procedimiento. Además, esto nos permite evitar el posible cambio de rutas producto de alguna universidad usando Round-robin DNS\footnote{https://en.wikipedia.org/wiki/Round-robin\_DNS}.
 
 En el comienzo de nuestra implementación nuestra herramienta explora la ruta completa para estudiar los hosts que pertenecen a la misma. Decidimos limitar el crecimiento del $time to live$ a 35 ya que es un poco mayor que la que utilizan las herramientas provistas por Linux. De todos modos esto no afectó ya que llegamos a todos los hosts elegidos en menos saltos.
 
-~
-
-Luego de esto utilizamos la ruta descubierta para realizar 50 repeticiones de mediciones de RTT de forma incremental en el TTL. Como las rutas pueden cambiar, cuando detectamos un cambio en algún hop, reintentamos el echo-request con el mismo TTL hasta que coincidiera el host con el descubierto inicialmente.
-
-~
-
-Utilizamos el promedio de las mismas con el fin de tener valores más estables. Luego de calculado este promedio realizamos las restas uno a uno entre hops sucesivos para obtener los tiempos diferenciales a partir de los acumulados.
-
-~
+Luego de esto utilizamos la ruta descubierta para realizar 50 repeticiones de mediciones de RTT de forma incremental en el TTL. Utilizamos el promedio de las mismas con el fin de tener valores más estables. Luego de calculado este promedio realizamos las restas uno a uno entre hops sucesivos para obtener los tiempos diferenciales a partir de los acumulados.
 
 Para normalizar los datos para el análisis calculamos el valor Z del RTT de cada hop\footnote{Recordar que nos estamos refiriendo a la diferencia entre el RTT absoluto de un hop y el anterior}, que nos da una idea de cuánto se aleja cada RTT de la media, medido en desvíos standard. Para ello usamos la ecuación facilitada por el enunciado: $$ ZRTT_i = \dfrac{RTT_i-\overline{RTT}}{SRTT}$$ donde $\overline{RTT}$ es el promedio y $SRTT$ el desvío standard de la distribución de los RTTs para una ruta dada. Esto nos permite analizar los saltos con una información estadísticamente más sólida que la diferencia absoluta medida en $ms$.
 
-~
-
-Finalmente, para simular el throughput utilizamos la ecuación de Mathis
-$$\frac{MSS}{EstimatedRTT * \frac{1}{\sqrt{EstimatedPacketLossProbability}}}$$
+Para simular el throughput utilizamos la ecuación de Mathis
+$$\frac{MSS}{EstimatedRTT * \frac{1}{1 - \sqrt{EstimatedPacketLossProbability}}}$$
 donde $EstimatedRTT$ se obtiene iterando sucesivas veces la ecuación
 $$\alpha * EstimatedRTT + (1 - \alpha) * SampleRTT$$
-y $EstimatedPacketLossProbability$ se calcula como $$\frac{\#Echo reply}{\#Echo request}$$
+y $EstimatedPacketLossProbability$ se calcula como $$1 - \frac{\#Echo reply}{\#Echo request}$$
 
 %TODO: Laski -- Por que se llama Estimated Packet Loss Probability si estima la probabilidad de que un paquete llegue bien? (Echos contestados sobre Echos enviados)
+% Buena pregunta. Yo copié lo que decía el enunciado. Ahí lo arreglé.
+
+Para resolver la geolocalización inicialmente decidimos incorporar una parte de código que obtuviera la información para cada IP. Esto nos trajo problemas ya que la diferencia entre los RTT no coincidía con la geolocalización real del salto. La herramienta que nos permitió encontrar estas inconsistencias fue IPLocation\footnote{http://www.iplocation.net/}, un meta-buscador que realizaba consultas a la base de IP2Location\footnote{http://www.ip2location.com/} actualizada el 01/06/2015. 

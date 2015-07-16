@@ -53,7 +53,7 @@ def explore_hops(target, target_txt):
 def main(target_txt, reps):
     target = gethostbyname(target_txt)
 
-    rtts, hops, ttls = explore_hops(target_txt, target)
+    rtts, hops, ttls = explore_hops(target, target_txt)
 
     # Mido ZRTT
     avg_rtts = rtts
@@ -110,9 +110,9 @@ def test_connection(target_txt, alpha=0.1, reps=10):
     if estimated_rtt is None:
         print("ERROR: No hubo respuesta alguna")
         return 0, 0
-    estimated_packet_loss_probability = n_reply / n_request
+    estimated_packet_loss_probability = 1 - (n_reply / n_request)
     MSS = get_mss()
-    estimated_throughput = MSS / estimated_rtt * (1 / math.sqrt(estimated_packet_loss_probability))
+    estimated_throughput = MSS / (estimated_rtt * (1 / (1-math.sqrt(estimated_packet_loss_probability))))
     return estimated_rtt, estimated_throughput
 
 
@@ -166,7 +166,7 @@ if __name__ == "__main__":
             reps = int(sys.argv[2])
         zrtts, avg_rtts, hops = main(sys.argv[1], reps)
         #Print to file
-        tableOutput(hops, zrtts, avg_rtts, sys.argv[3], sys.argv[4])
+        # tableOutput(hops, zrtts, avg_rtts, sys.argv[3], sys.argv[4])
         #Print output to console
         for i, hop in enumerate(hops):
             print(hop)

@@ -1,15 +1,7 @@
 En el presente trabajo práctico tuvimos como desafío implementar una herramienta muy común de diagnóstico de red, el traceroute.
-
 Por medio de la misma los administradores de red pueden analizar la ruta que sigue un paquete hasta un destino dado.
 
-~
+Luego se nos pidió usar la herramienta diseñada para evaluar las rutas que toman los paquetes hacia diferentes lugares del mundo, incluyendo un análisis sobre cómo distinguir los enlaces trasatlánticos y evaluando su correcitud posteriormente con herramientas de geolocalización de IP.
 
-Los fundamentos de dicha herramienta son muy sencillos. Se utilizan paquetes IP para recorrer la ruta aumentando de un salto a la vez. Esto se hace por medio del campo TTL (\textit{Time to live}) que nos permite configurar la cantidad máxima de ``saltos'' que se le permiten al paquete para llegar a destino. Cuando un router recibe un paquete para redireccionarlo, previo a esto decrementa en 1 su TTL, si el mismo resulta igual a 0 entonces devuelve el mensaje \textbf{ICMP Time Exceeded} a la dirección de origen.
+Por último se nos pidió estimar el valor del $throughput$ de la conexión para las rutas analizadas, teniendo en cuenta la pérdida de paquetes.
 
-~
-
-La herramienta se basa en este comportamiento para obtener la información de la ruta. La misma envía varios paquetes incrementando el TTL progresivamente desde 1 hasta que el paquete efectivamente llega a destino, y va registrando los paquetes de respuesta \textbf{ICMP Time Exceeded} que recibe de cada router.
-
-~
-
-Esta herramienta se puede implementar con paquetes ICMP, TCP o UDP, según necesidad. La herramienta default que se ofrece en cualquier distribución de Linux permite realizar el procedimiento con los tres tipos de paquetes.

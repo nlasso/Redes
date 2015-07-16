@@ -1,37 +1,52 @@
-\subsection{Resultados generales}
- En todas nuestras pruebas en valor de $MSS$ obtenido fue de $1452$ bytes, pero lo calculamos programáticamente antes de cada test para asegurarnos de usar el real en cada sistema utilizado.
+\subsection{Aclaraciones generales}
+ Para cada ruta elegida realizamos una tabla con los resultados de nuestro $traceroute$, un gráfico con barras representando cada salto y un mapa que marca la ruta geográfica que traza la conexión establecida. En las tablas incluímos el valor promedio del RTT absoluto de la computadora local hasta cada salto, pero como ya fue mencionado calculamos el ZRTT usando la diferencia de RTT entre un salto y el siguiente. En los mapas los saltos dentro de una misma ciudad no aparecen representados.
  
- Establecimos como umbral del ZRTT el valor de $1$, ya que en el cálculo del mismo se efectúa una normalización a la distribución normal, y por definicion de esta un valor por fuera de este umbral comienza a ser estadísticamente relevante (solo un 15\% de los valores caen por encima del mismo).
+ Establecimos como umbral del ZRTT un valor de $1$, ya que para el cálculo del mismo se efectúa una normalización, y consideramos que un valor mayor a un desvío estándar comienza a ser estadísticamente relevante. Solo un 15\% de los valores caen por encima del mismo.
  
+ Además, agregamos también para contrastar el resultado del enviar 100 paquetes mediante el comando $ping$ de Linux.
+  
 \subsection{Estimación de RTT y análisis de parámetros}
 
-A continuación presentamos los resultados de las pruebas de $\alpha$ y $n$ en función del RTT estimado para cada una de las universidades a las que realizamos un traceroute.
+Antes de comenzar con el detalle de cada universidad debemos justificar la elección de un valor para $\alpha$ y $n$ (cantidad de repeticiones) a usar en el cálculo del $throghput$. Es por esto que incluimos primero esta sección a pesar de corresponder al último experimiento realizado. El valor del $throughput$ estimado se incluye en el análisis de cada universidad en particular.
 
-~
+En cada gráfico se incluye también una recta con el valor de RTT promedio obtenido en las experimentaciones usando $traceroute$.
 
-\begin{minipage}{0.48\textwidth}
-    \includegraphics[scale=0.62]{imgs/thoughput/berkeley_rtt.pdf}
-\end{minipage}
-\begin{minipage}{0.48\textwidth}
-    \includegraphics[scale=0.62]{imgs/thoughput/cusat_rtt.pdf}
-\end{minipage}
+\begin{figure}[htp]
+ \centering
+ \includegraphics[scale=0.80]{imgs/thoughput/berkeley_rtt.pdf}
+\end{figure}
 
-\begin{minipage}{0.48\textwidth}
-    \includegraphics[scale=0.62]{imgs/thoughput/hi_rtt.pdf}
-\end{minipage}
-\begin{minipage}{0.48\textwidth}
-    \includegraphics[scale=0.62]{imgs/thoughput/pretoria_rtt.pdf}
-\end{minipage}
+\begin{figure}[htp]
+ \centering
+ \includegraphics[scale=0.80]{imgs/thoughput/cusat_rtt.pdf}
+\end{figure}
 
-~
+\begin{figure}[htp]
+ \centering
+ \includegraphics[scale=0.80]{imgs/thoughput/hi_rtt.pdf}
+\end{figure}
+
+\begin{figure}[htp]
+ \centering
+ \includegraphics[scale=0.80]{imgs/thoughput/pretoria_rtt.pdf}
+\end{figure}
 
 \begin{figure}[htp]
  \centering
  \includegraphics[scale=0.80]{imgs/thoughput/psu_rtt.pdf}
 \end{figure}
 
-%TODO: Laski - Completar aca con mas justificaciones sobre la eleccion de estos parametros. En los datos no veo que estos valores maximicen en throughput, por lo que no lo escribi como justificiacion.
-Como se puede observar, en la mayoria de los casos $\alpha = 0.5$ y $n = 50$ estan cerca del promedio de RTT; lo que tiene sentido ya que con dichos valores las operaciones realizadas con los RTT se acercan bastante a el promedio. Por lo que, decidimos utilizar los mismos para la estimación de throughput.
+Lo primero que notamos es que los resultados parecen ser, dentro de lo razonable, bastante estables: con excepción de Perm, ninguna combinación de parámetros arrojó RTTs distantes entre sí más allá de 45 ms, y todos, con mayor o menor varianza, rondan el resultado obtenido en el experimento de $traceroute$.
+
+También notamos que, como era de esperar, una cantidad mayor de repeticiones parecería dar resultados más ceranos al RTT calculado con el otro método. Pero que, también dentro de lo esperable, valores pequeños de $\alpha$ (es decir, darle mucho peso a las últimas corridas) anulan esta situación.
+
+Decidimos quedarnos pues con $n=50$. Para ese valor, $\alpha = 0.3$ y $\alpha = 0.5$ parecerían dar los resultados más cercanos al RTT calculado mediante $traceroute$, con lo cual decidimos quedarnos con $\alpha = 0.5$ y usar esos dos parámetros para la estimación del $throughput$.
+
+En todas nuestras pruebas en valor de $MSS$ obtenido fue de $1452$ bytes, pero lo calculamos programáticamente antes de cada test para asegurarnos de usar el correcto en cada sistema utilizado (ver el método $get\_mss$ del archivo $main.py$).
+
+Aunque no se incluye en los gráficos la pérdida de paquetes fue realmente baja, llegando a ser nula en la mayoría de las corridas, con lo cual (junto con el $MSS$ constante) da como resultado un $throghput$ que en los hechos parece depender solamente del $RTT$ estimado.
+
+La unidad usada para presentar el $throughput$ estimado es $B/ms$ (bytes por milisegundo) que coincide exactamente con kB/s si se usa $kB = 1000B$.
 
 \subsection{Berkeley, EEUU}
 
@@ -59,11 +74,9 @@ Como se puede observar, en la mayoria de los casos $\alpha = 0.5$ y $n = 50$ est
 
 \vspace{20pt}
 
-Podemos observar el fenómeno ya mencionado sobre RTTs menores en saltos posteriores. En el gráfico de barras se puede observar que por encima del umbral quedan registrados dos saltos que corresponden a las distancias mas grandes segun la geolocalización. Sin embargo, el salto correspondiente al cable trasatlántico entre Buenos Aires y Miami (lugar del llamado NOC de las Américas) queda muy por encima del resto, evidenciando su utilización.
+Podemos observar el fenómeno ya mencionado sobre RTTs menores en saltos posteriores. En el gráfico de barras se puede observar que por encima del umbral quedan registrados dos saltos que corresponden a las distancias mas grandes según la geolocalización. Sin embargo, el salto correspondiente al cable trasatlántico entre Buenos Aires y Miami (lugar del llamado NOC de las Américas) queda muy por encima del resto, evidenciando su utilización.
 
-~
-
-El valor del throughput estimado para esta ruta fue de $6.6$ kBps, el mayor de todas las rutas. Creemos que como el throughput esta relacionado intimamente con los valores de RTT, el valor alto de throughput es una consecuencia de la cercania del objetivo. El valor fue calculado utilizando $\alpha = 0.5$, $n = 50$ y un valor de EPLP de 1, que obtuvimos realizando 100 echo requests.
+El valor del throughput estimado para esta ruta fue de 6.66 B/ms, el mayor de todas las rutas. Como el throughput está relacionado íntimamente con los valores de RTT, vemos que su alto valor es una consecuencia de la cercanía al objetivo.
 
 \begin{verbatim}
  --- berkeley.edu ping statistics ---
@@ -75,7 +88,6 @@ rtt min/avg/max/mdev = 188.277/190.789/213.277/3.612 ms
  \centering
  \includegraphics[scale=0.50]{imgs/berkeley.png}
 \end{figure}
-
 
 \begin{figure}[htp]
  \centering
@@ -107,18 +119,11 @@ rtt min/avg/max/mdev = 188.277/190.789/213.277/3.612 ms
 
 En una primera instancia, notamos que el IP \verb|195.22.220.152| fue marcado como Italiano pero su RTT era demasiado bajo. Verificando contra otras bases de localizacion de IP, comprobamos que efectivamente el nodo se encuentra en Argentina, si bien su rango pertenece a Italia, ya que el ISP dueño es una corporacion Italiana.
 
-~
-
 Nuevamente vemos una correspondencia entre el salto más largo, trasatlántico esta vez, y la diferencia entre RTTs, reflejada a su vez por el valor de ZRTT. Sin embargo también vemos una diferencia similar entre dos puntos supuestamente cercanos, y una diferencia negativa entre dos puntos supuestamente alejados. Sospechamos que esto último puede ser algún defecto en las bases de datos de geolocalización.
-
-~
 
 En este caso hay 3 saltos que quedan por encima del umbral, como se puede observar en el gráfico de barras. El primero de ellos corresponde al salto entre Buenos Aires y New Orleans, el segundo al salto entre New Orleans e Italia y el tercero corresponde al salto entre Italia e India. Los primeros dos seguramente involucren el uso de un cable trasatlántico.
 
-~
-
-% TODO: Revisar que la unidad del throughput este bien.
-El valor del throughput estimado para esta ruta fue de $3.2$ kBps. Comparándolo con el anterior, podemos ver que el valor absoluto de RTT de la ruta sea mucho mayor afecta directamente al throughput obtenido, ya que los valores de $EPLP$ y $MSS$ se mantienen iguales. El valor fue calculado utilizando $\alpha = 0.5$, $n = 50$ y un valor de EPLP de 1, que obtuvimos realizando 100 echo requests.
+El valor del throughput estimado para esta ruta fue de 3.25 B/ms. Comparándolo con el anterior, podemos ver que el valor absoluto mucho mayor de RTT afecta directamente al throughput obtenido.
 
 \begin{verbatim}
 --- cusat.ac.in ping statistics ---
@@ -165,15 +170,11 @@ rtt min/avg/max/mdev = 420.858/422.976/433.482/1.565 ms
 
 \vspace{20pt}
 
-Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU; y con el salto entre Estados Unidos y Suecia. Los IPs \verb|213.155.133.229| y \verb|213.248.85.174| dieron problemas para ser localizados, ya que ambos pertenencen a, aparentemente, la union europea. Sin embargo hay algunos geolocalizadores que les dan una ubicación estaunidense mientras que otros le dan una ubicación sueca. En base a los ZRTT y observando que ciertos IPs pueden tener un rango que no corresponda con su ubicación geográfica, determinamos que el primero esta ubicado fisicamente en Estados Unidos, mientras que el segundo lo hace en Suecia (o en algún lugar cercano de Europa).
-
-~
+Una vez más el valor del ZRTT es consistente con el salto grande entre Argentina y EEUU; y con el salto entre Estados Unidos y Suecia. Los IPs \verb|213.155.133.229| y \verb|213.248.85.174| dieron problemas para ser localizados: ambos pertenencen aparentemente a la Unión Europea, pero hay algunos geolocalizadores que les dan una ubicación estaunidense mientras que otros le dan una ubicación sueca. En base a los ZRTT y observando que ciertos IPs pueden tener un rango que no corresponda con su ubicación geográfica, determinamos que el primero esta ubicado fisicamente en Estados Unidos, mientras que el segundo, en Suecia (o en algún lugar cercano de Europa).
 
 Observando el gráfico de barras correspondiente podemos observar que ambos saltos; tanto el de Buenos Aires a Miami, como el de Ashburn a Stockholm; quedan por encima del umbral elegido. En comparación al enlace hacia la India se puede observar que se toman caminos aparentemente distintos para dar el salto desde Estados Unidos a Europa, ya que este salto posee una diferencia de RTT mucho menor que el visto en la ruta anterior.
 
-~
-
-El throughput estimado para esta ruta fue de $4.6$ kBps, lo que lo deja ubicado en el medio de los resultados que venimos obteniendo. El valor fue calculado utilizando $\alpha = 0.5$, $n = 50$ y un valor de EPLP de 1, que obtuvimos realizando 100 echo requests.
+El throughput estimado para esta ruta fue de 4.61 B/ms, lo que lo deja ubicado en el medio de los resultados que venimos obteniendo (consistente con nuestro análisis de RTT).
 
 \begin{verbatim}
 --- drupalclvs.rhi.hi.is ping statistics ---
@@ -219,14 +220,12 @@ rtt min/avg/max/mdev = 274.486/301.449/1920.864/175.128 ms, pipe 2
 
 Una vez más se debe transitar por medio de Miami para llegar a Europa, y como se puede observar el ZRTT es consistente con este salto. 
 
-~
-
 Inicialmente esta ruta fue complicada de analizar, ya que obteníamos un salto transatlántico sorprendentemente corto.
 Luego de corroborar mejor nuestras fuentes de geolocalización IP lo mismo cobró más coherencia observando que el salto transatlántico entre Estados Unidos y Suecia era lo que tenía el ZRTT alto. Una vez más en el gráfico de barras podemos observar dos saltos por encima del umbral, correspondientes al salto entre Buenos Aires y Miami y al discutido recientemente.
 
-~
+Esta ruta fue la única ruta para la que obtuvimos pérdida de paquetes, obteniendo una $EstimatedPacketLossProbability = 0.02$. En los demás casos este valor no se incluye por ser siempre $=0$.
 
-El throughput estimado para esta ruta fue de $3.822$ kBps, un valor comparativamente bajo aunque no tanto como el enlace con India. El valor fue calculado utilizando $\alpha = 0.5$, $n = 50$ y un valor de EPLP de $0.98$, que obtuvimos realizando 100 echo requests.
+El throughput estimado para esta ruta fue de 3.82 B/ms, un valor comparativamente bajo aunque no tanto como el enlace con India. La pequeña probabilidad de paquetes no pareciera alterar en gran medida nuestro análisis sobre la importancia del RTT en su cálculo.
 
 \begin{verbatim}
 --- psu.ru ping statistics ---
@@ -279,20 +278,13 @@ rtt min/avg/max/mdev = 324.972/333.262/347.473/6.723 ms
 
 \vspace{20pt}
 
-Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esto puede deberse a la ausencia de un cable trasatlántico que conecte directamente Sudamérica con África. Esta vez el salto trasatlántico sí tiene un ZRTT grande y el otro salto significativo es dentro de Cape Town, en Sudáfrica, lo que nos parecio llamativo.
+Por lejos nuestra ruta más larga, lo primero que notamos es que a pesar de la relativa cercanía geográfica, para conectar Sudamérica con África hace falta pasar por continentes del norte (y una vez más por Miami, casi una constante de todas las rutas elegidas). Esto puede deberse a la ausencia de un cable trasatlántico que conecte directamente Sudamérica con África. Esta vez el salto trasatlántico sí tiene un ZRTT grande y el otro salto significativo es dentro de Cape Town, en Sudáfrica, lo que nos resultó llamativo.
 
-~
+Creemos que este último puede tener que ver con las demoras de encolamiento (propias para paquetes ICMP) o situaciones similares en loops locales de Sudáfrica.
 
-Creemos que este último puede tener que ver con algún tipo error de geolocalización, aunque en varias bases de datos con fechas diferentes de actualización la localización resultaba consistente.
-Otra posibilidad para que se de este fenómeno son las demoras de encolamiento (propias para paquetes ICMP) o situaciones similares en loops locales de Sudáfrica.
+Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales (comando $ping$ de Linux) como para verificar mejor esta situación puntualmente. Estos checkeos nos dieron resultados similares a los calculados por nuestra herramienta (aproximadamente 175ms de diferencia).
 
-~
-
-Además, hemos re-analizado la diferencia entre los hosts 196.32.209.50 y 196.32.209.117 por separado, ya que ambos responden al ping, con herramientas adicionales (comando ping de Linux) como para verificar mejor esta situación puntualmente. Estos checkeos nos dieron resultados similares a los calculados por nuestra herramienta. Aproximadamente 175ms de diferencia.
-
-~
-
-El throughput estimado para esta ruta fue de $3.030$ kBps, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas. El valor fue calculado utilizando $\alpha = 0.5$, $n = 50$ y un valor de EPLP de $1$, que obtuvimos realizando 100 echo requests.
+El throughput estimado para esta ruta fue de 3.03 B/ms, el más bajo de las rutas usadas. Entendemos que tiene que ver con la gran distancia física que recorre la conexión trazada y su consiguiente RTT mayor a las demás rutas.
 
 \begin{verbatim}
 --- up.ac.za ping statistics ---
